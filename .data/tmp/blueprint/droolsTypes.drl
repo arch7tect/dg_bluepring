@@ -1,4 +1,5 @@
 package ru.neoflex.rules
+dialect  "mvel"
 
 declare InputType
     id: java.math.BigDecimal
