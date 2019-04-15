@@ -1,0 +1,10 @@
+package ru.neoflex.drools
+
+declare InputType
+    id: java.math.BigDecimal
+    name: java.lang.String
+end
+
+query "getRes"
+    res: InputType()
+end
