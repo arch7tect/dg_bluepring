@@ -1,4 +1,4 @@
-package ru.neoflex.drools
+package ru.neoflex.rules
 
 declare InputType
     id: java.math.BigDecimal
