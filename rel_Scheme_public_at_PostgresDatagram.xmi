@@ -71,6 +71,12 @@
     <primaryKey name="dataset_association_pk">
       <keyFeatures column="//@tables.2/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dataset_association_source" target="//@tables.5">
+      <keyFeatures column="//@tables.2/@columns.2"/>
+    </foreignKeys>
+    <foreignKeys name="dataset_association_target" target="//@tables.5">
+      <keyFeatures column="//@tables.2/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="dataset_association_fields">
     <columns name="association_e_id">
@@ -86,6 +92,12 @@
       <keyFeatures column="//@tables.3/@columns.0"/>
       <keyFeatures column="//@tables.3/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="dataset_association_fields_key" target="//@tables.2">
+      <keyFeatures column="//@tables.3/@columns.0"/>
+    </foreignKeys>
+    <foreignKeys name="dataset_association_fields" target="//@tables.6">
+      <keyFeatures column="//@tables.3/@columns.1"/>
+    </foreignKeys>
   </tables>
   <tables name="dataset_complexassociation">
     <columns name="e_id">
@@ -100,6 +112,9 @@
     <primaryKey name="dataset_complexassociation_pk">
       <keyFeatures column="//@tables.4/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dataset_complexassociation_associator" target="//@tables.5">
+      <keyFeatures column="//@tables.4/@columns.2"/>
+    </foreignKeys>
   </tables>
   <tables name="dataset_dataset">
     <columns name="e_id">
@@ -132,6 +147,9 @@
     <primaryKey name="dataset_dataset_pk">
       <keyFeatures column="//@tables.5/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_sparksql_sqlports_key" target="//@tables.56">
+      <keyFeatures column="//@tables.5/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="dataset_field">
     <columns name="e_id">
@@ -182,6 +200,18 @@
     <primaryKey name="dataset_field_pk">
       <keyFeatures column="//@tables.6/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dataset_field_dataset" target="//@tables.5">
+      <keyFeatures column="//@tables.6/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="etl_unionfield_inputportfield" target="//@tables.6">
+      <keyFeatures column="//@tables.6/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="etl_unionfield_unionportfield" target="//@tables.6">
+      <keyFeatures column="//@tables.6/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="dataset_field_domainstructure" target="//@tables.7">
+      <keyFeatures column="//@tables.6/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="dataset_fieldtype">
     <columns name="e_id">
@@ -211,6 +241,12 @@
     <primaryKey name="dataset_fieldtype_pk">
       <keyFeatures column="//@tables.7/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dataset_structtype_internalstructure" target="//@tables.5">
+      <keyFeatures column="//@tables.7/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="dataset_arraytype_elementtype" target="//@tables.7">
+      <keyFeatures column="//@tables.7/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="dwh_csvoptions">
     <columns name="e_id">
@@ -272,6 +308,9 @@
     <primaryKey name="dwh_defaultfield_pk">
       <keyFeatures column="//@tables.9/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dwh_defaultfield_stagingarea" target="//@tables.11">
+      <keyFeatures column="//@tables.9/@columns.6"/>
+    </foreignKeys>
   </tables>
   <tables name="dwh_mapping">
     <columns name="e_id">
@@ -304,6 +343,9 @@
     <primaryKey name="dwh_mapping_pk">
       <keyFeatures column="//@tables.10/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dwh_stagingtable_mappings_key" target="//@tables.13">
+      <keyFeatures column="//@tables.10/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="dwh_stagingarea">
     <columns name="e_id">
@@ -336,6 +378,21 @@
     <primaryKey name="dwh_stagingarea_pk">
       <keyFeatures column="//@tables.11/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dwh_stagingarea_csvoptions" target="//@tables.8">
+      <keyFeatures column="//@tables.11/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingarea_context" target="//@tables.24">
+      <keyFeatures column="//@tables.11/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingarea_project" target="//@tables.43">
+      <keyFeatures column="//@tables.11/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingarea_oozie" target="//@tables.119">
+      <keyFeatures column="//@tables.11/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingarea_softwaresystem" target="//@tables.124">
+      <keyFeatures column="//@tables.11/@columns.6"/>
+    </foreignKeys>
   </tables>
   <tables name="dwh_stagingarea_deployments">
     <columns name="stagingarea_e_id">
@@ -351,6 +408,12 @@
       <keyFeatures column="//@tables.12/@columns.0"/>
       <keyFeatures column="//@tables.12/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="dwh_stagingarea_deployments_key" target="//@tables.11">
+      <keyFeatures column="//@tables.12/@columns.0"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingarea_deployments" target="//@tables.109">
+      <keyFeatures column="//@tables.12/@columns.1"/>
+    </foreignKeys>
   </tables>
   <tables name="dwh_stagingtable">
     <columns name="e_id">
@@ -383,6 +446,15 @@
     <primaryKey name="dwh_stagingtable_pk">
       <keyFeatures column="//@tables.13/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dwh_stagingtable_csvoptions" target="//@tables.8">
+      <keyFeatures column="//@tables.13/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingtable_stagingarea" target="//@tables.11">
+      <keyFeatures column="//@tables.13/@columns.7"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingtable_table" target="//@tables.98">
+      <keyFeatures column="//@tables.13/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="dwh_stagingtable_defaultfields">
     <columns name="stagingtable_e_id">
@@ -398,6 +470,12 @@
       <keyFeatures column="//@tables.14/@columns.0"/>
       <keyFeatures column="//@tables.14/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="dwh_stagingtable_defaultfields" target="//@tables.9">
+      <keyFeatures column="//@tables.14/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="dwh_stagingtable_defaultfields_key" target="//@tables.13">
+      <keyFeatures column="//@tables.14/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_aggregation_groupbyfieldname">
     <columns name="aggregation_groupbyfieldname_e_id">
@@ -413,6 +491,9 @@
       <keyFeatures column="//@tables.15/@columns.0"/>
       <keyFeatures column="//@tables.15/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_aggregation_groupbyfieldname_key" target="//@tables.56">
+      <keyFeatures column="//@tables.15/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_aggregationparameter">
     <columns name="e_id">
@@ -439,6 +520,9 @@
     <primaryKey name="etl_aggregationparameter_pk">
       <keyFeatures column="//@tables.16/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_aggregationparameter_aggregation" target="//@tables.56">
+      <keyFeatures column="//@tables.16/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_avroexplodefield">
     <columns name="e_id">
@@ -462,6 +546,9 @@
     <primaryKey name="etl_avroexplodefield_pk">
       <keyFeatures column="//@tables.17/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_avroexplodefield_avrosource" target="//@tables.49">
+      <keyFeatures column="//@tables.17/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_coaction">
     <columns name="e_id">
@@ -482,6 +569,12 @@
     <primaryKey name="etl_coaction_pk">
       <keyFeatures column="//@tables.18/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_coaction_sla" target="//@tables.47">
+      <keyFeatures column="//@tables.18/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="etl_coworkflow_workflow" target="//@tables.65">
+      <keyFeatures column="//@tables.18/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_cocontrols">
     <columns name="e_id">
@@ -540,6 +633,9 @@
     <primaryKey name="etl_codataset_pk">
       <keyFeatures column="//@tables.20/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_codataset_job" target="//@tables.22">
+      <keyFeatures column="//@tables.20/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_coinputevent">
     <columns name="e_id">
@@ -572,6 +668,12 @@
     <primaryKey name="etl_coinputevent_pk">
       <keyFeatures column="//@tables.21/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_codatain_dataset" target="//@tables.20">
+      <keyFeatures column="//@tables.21/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="etl_coinputevent_job" target="//@tables.22">
+      <keyFeatures column="//@tables.21/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_cojob">
     <columns name="e_id">
@@ -607,6 +709,15 @@
     <primaryKey name="etl_cojob_pk">
       <keyFeatures column="//@tables.22/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="fk_kgdbeycn3h77g2p8rlm9xxc33" target="//@tables.18">
+      <keyFeatures column="//@tables.22/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="fk_iubu0px0shhyi5oydaqykv14o" target="//@tables.19">
+      <keyFeatures column="//@tables.22/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="etl_cojob_project" target="//@tables.43">
+      <keyFeatures column="//@tables.22/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_configurationproperty">
     <columns name="e_id">
@@ -645,6 +756,12 @@
     <primaryKey name="etl_configurationproperty_pk">
       <keyFeatures column="//@tables.23/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_wfjava_properties_key" target="//@tables.63">
+      <keyFeatures column="//@tables.23/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfsubworkflow_properties_key" target="//@tables.63">
+      <keyFeatures column="//@tables.23/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_context">
     <columns name="e_id">
@@ -691,6 +808,12 @@
     <primaryKey name="etl_cooutputevent_pk">
       <keyFeatures column="//@tables.25/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_codataout_dataset" target="//@tables.20">
+      <keyFeatures column="//@tables.25/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="etl_cooutputevent_job" target="//@tables.22">
+      <keyFeatures column="//@tables.25/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_debugoutput">
     <columns name="e_id">
@@ -717,6 +840,9 @@
     <primaryKey name="etl_debugoutput_pk">
       <keyFeatures column="//@tables.26/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_debugoutput_outputport" target="//@tables.5">
+      <keyFeatures column="//@tables.26/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_droolsrulesfile">
     <columns name="e_id">
@@ -752,6 +878,9 @@
     <primaryKey name="etl_droolsrulesfile_pk">
       <keyFeatures column="//@tables.27/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_drools_rulesfiles_key" target="//@tables.56">
+      <keyFeatures column="//@tables.27/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_explodefield">
     <columns name="e_id">
@@ -775,6 +904,9 @@
     <primaryKey name="etl_explodefield_pk">
       <keyFeatures column="//@tables.28/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_explodefield_xmlsource" target="//@tables.49">
+      <keyFeatures column="//@tables.28/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_explodestepfield">
     <columns name="e_id">
@@ -804,6 +936,12 @@
     <primaryKey name="etl_explodestepfield_pk">
       <keyFeatures column="//@tables.29/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_explodestepfield_domainstructure" target="//@tables.7">
+      <keyFeatures column="//@tables.29/@columns.7"/>
+    </foreignKeys>
+    <foreignKeys name="etl_explodestepfield_explodestep" target="//@tables.56">
+      <keyFeatures column="//@tables.29/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_fscommand">
     <columns name="e_id">
@@ -839,6 +977,12 @@
     <primaryKey name="etl_fscommand_pk">
       <keyFeatures column="//@tables.30/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_prepare_deletedir_key" target="//@tables.42">
+      <keyFeatures column="//@tables.30/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="etl_prepare_mkdir_key" target="//@tables.42">
+      <keyFeatures column="//@tables.30/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_groupwithstate_groupbykey">
     <columns name="groupwithstate_groupbykey_e_id">
@@ -854,6 +998,9 @@
       <keyFeatures column="//@tables.31/@columns.0"/>
       <keyFeatures column="//@tables.31/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_groupwithstate_groupbykey_key" target="//@tables.56">
+      <keyFeatures column="//@tables.31/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_hivetarget_partitions">
     <columns name="hivetarget_partitions_e_id">
@@ -869,6 +1016,9 @@
       <keyFeatures column="//@tables.32/@columns.0"/>
       <keyFeatures column="//@tables.32/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_hivetarget_partitions_key" target="//@tables.52">
+      <keyFeatures column="//@tables.32/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_inputfieldmapping">
     <columns name="e_id">
@@ -904,6 +1054,9 @@
     <primaryKey name="etl_inputfieldmapping_pk">
       <keyFeatures column="//@tables.33/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_inputfieldmapping_target" target="//@tables.52">
+      <keyFeatures column="//@tables.33/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_join_joineekeyfields">
     <columns name="join_joineekeyfields_e_id">
@@ -919,6 +1072,9 @@
       <keyFeatures column="//@tables.34/@columns.0"/>
       <keyFeatures column="//@tables.34/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_join_joineekeyfields_key" target="//@tables.56">
+      <keyFeatures column="//@tables.34/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_join_keyfields">
     <columns name="join_keyfields_e_id">
@@ -934,6 +1090,9 @@
       <keyFeatures column="//@tables.35/@columns.0"/>
       <keyFeatures column="//@tables.35/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_join_keyfields_key" target="//@tables.56">
+      <keyFeatures column="//@tables.35/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_kafkasourceoption">
     <columns name="e_id">
@@ -957,6 +1116,9 @@
     <primaryKey name="etl_kafkasourceoption_pk">
       <keyFeatures column="//@tables.36/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_kafkasourceoption_kafkasource" target="//@tables.49">
+      <keyFeatures column="//@tables.36/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_kafkatargetproperty">
     <columns name="e_id">
@@ -980,6 +1142,9 @@
     <primaryKey name="etl_kafkatargetproperty_pk">
       <keyFeatures column="//@tables.37/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_kafkatargetproperty_kafkatarget" target="//@tables.52">
+      <keyFeatures column="//@tables.37/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_localtarget_partitions">
     <columns name="localtarget_partitions_e_id">
@@ -995,6 +1160,9 @@
       <keyFeatures column="//@tables.38/@columns.0"/>
       <keyFeatures column="//@tables.38/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_localtarget_partitions_key" target="//@tables.52">
+      <keyFeatures column="//@tables.38/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_modelbasedanalysis_modelfeaturesfields">
     <columns name="modelbasedanalysis_modelfeaturesfields_e_id">
@@ -1010,6 +1178,9 @@
       <keyFeatures column="//@tables.39/@columns.0"/>
       <keyFeatures column="//@tables.39/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_modelbasedanalysis_modelfeaturesfields_key" target="//@tables.56">
+      <keyFeatures column="//@tables.39/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_physicaljdbccontext">
     <columns name="e_id">
@@ -1056,6 +1227,9 @@
     <primaryKey name="etl_pivotparameter_pk">
       <keyFeatures column="//@tables.41/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_pivotparameter_aggregation" target="//@tables.56">
+      <keyFeatures column="//@tables.41/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_prepare">
     <columns name="e_id">
@@ -1114,6 +1288,9 @@
     <primaryKey name="etl_project_pk">
       <keyFeatures column="//@tables.43/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_project_parentproject" target="//@tables.43">
+      <keyFeatures column="//@tables.43/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_projectionfield_sourcefields">
     <columns name="projectionfield_e_id">
@@ -1129,6 +1306,12 @@
       <keyFeatures column="//@tables.44/@columns.0"/>
       <keyFeatures column="//@tables.44/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_projectionfield_sourcefields" target="//@tables.6">
+      <keyFeatures column="//@tables.44/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="etl_projectionfield_sourcefields_key" target="//@tables.6">
+      <keyFeatures column="//@tables.44/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_property">
     <columns name="e_id">
@@ -1209,6 +1392,30 @@
     <primaryKey name="etl_property_pk">
       <keyFeatures column="//@tables.45/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="dwh_stagingarea_parameters_key" target="//@tables.11">
+      <keyFeatures column="//@tables.45/@columns.14"/>
+    </foreignKeys>
+    <foreignKeys name="etl_coworkflow_configuration_key" target="//@tables.18">
+      <keyFeatures column="//@tables.45/@columns.12"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transformation_parameters_key" target="//@tables.54">
+      <keyFeatures column="//@tables.45/@columns.10"/>
+    </foreignKeys>
+    <foreignKeys name="rt_importwizard_workflowparameters_key" target="//@tables.113">
+      <keyFeatures column="//@tables.45/@columns.23"/>
+    </foreignKeys>
+    <foreignKeys name="rt_jobdeployment_parameters_key" target="//@tables.114">
+      <keyFeatures column="//@tables.45/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="rt_transformationdeployment_parameters_key" target="//@tables.126">
+      <keyFeatures column="//@tables.45/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="sse_notebook_params_key" target="//@tables.131">
+      <keyFeatures column="//@tables.45/@columns.18"/>
+    </foreignKeys>
+    <foreignKeys name="sse_workspace_parameters_key" target="//@tables.147">
+      <keyFeatures column="//@tables.45/@columns.16"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_schemedataset">
     <columns name="e_id">
@@ -1232,6 +1439,9 @@
     <primaryKey name="etl_schemedataset_pk">
       <keyFeatures column="//@tables.46/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_schemedataset_schemedataset" target="//@tables.5">
+      <keyFeatures column="//@tables.46/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_sladefinition">
     <columns name="e_id">
@@ -1302,6 +1512,9 @@
     <primaryKey name="etl_sortfeature_pk">
       <keyFeatures column="//@tables.48/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_sort_sortfeatures_key" target="//@tables.56">
+      <keyFeatures column="//@tables.48/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_source">
     <columns name="e_id">
@@ -1481,6 +1694,18 @@
     <primaryKey name="etl_source_pk">
       <keyFeatures column="//@tables.49/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_source_outputport" target="//@tables.5">
+      <keyFeatures column="//@tables.49/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="etl_source_context" target="//@tables.24">
+      <keyFeatures column="//@tables.49/@columns.2"/>
+    </foreignKeys>
+    <foreignKeys name="etl_kafkasource_valuescheme" target="//@tables.46">
+      <keyFeatures column="//@tables.49/@columns.31"/>
+    </foreignKeys>
+    <foreignKeys name="etl_source_transformation" target="//@tables.54">
+      <keyFeatures column="//@tables.49/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_sourceoption">
     <columns name="e_id">
@@ -1504,6 +1729,9 @@
     <primaryKey name="etl_sourceoption_pk">
       <keyFeatures column="//@tables.50/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_sourceoption_localsource" target="//@tables.49">
+      <keyFeatures column="//@tables.50/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_sqloption">
     <columns name="e_id">
@@ -1527,6 +1755,9 @@
     <primaryKey name="etl_sqloption_pk">
       <keyFeatures column="//@tables.51/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_sqloption_sqlsource" target="//@tables.49">
+      <keyFeatures column="//@tables.51/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_target">
     <columns name="e_id">
@@ -1718,6 +1949,18 @@
     <primaryKey name="etl_target_pk">
       <keyFeatures column="//@tables.52/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_target_inputport" target="//@tables.5">
+      <keyFeatures column="//@tables.52/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="etl_target_context" target="//@tables.24">
+      <keyFeatures column="//@tables.52/@columns.2"/>
+    </foreignKeys>
+    <foreignKeys name="etl_kafkatarget_valuescheme" target="//@tables.46">
+      <keyFeatures column="//@tables.52/@columns.50"/>
+    </foreignKeys>
+    <foreignKeys name="etl_target_transformation" target="//@tables.54">
+      <keyFeatures column="//@tables.52/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_targetoption">
     <columns name="e_id">
@@ -1741,6 +1984,9 @@
     <primaryKey name="etl_targetoption_pk">
       <keyFeatures column="//@tables.53/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_targetoption_localtarget" target="//@tables.52">
+      <keyFeatures column="//@tables.53/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_transformation">
     <columns name="e_id">
@@ -1767,6 +2013,12 @@
     <primaryKey name="etl_transformation_pk">
       <keyFeatures column="//@tables.54/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_transformation_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.54/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transformation_project" target="//@tables.43">
+      <keyFeatures column="//@tables.54/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_transformation_userdefinedfunctions">
     <columns name="transformation_e_id">
@@ -1782,6 +2034,12 @@
       <keyFeatures column="//@tables.55/@columns.0"/>
       <keyFeatures column="//@tables.55/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_transformation_userdefinedfunctions_key" target="//@tables.54">
+      <keyFeatures column="//@tables.55/@columns.0"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transformation_userdefinedfunctions" target="//@tables.58">
+      <keyFeatures column="//@tables.55/@columns.1"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_transformationstep">
     <columns name="e_id">
@@ -1916,6 +2174,33 @@
     <primaryKey name="etl_transformationstep_pk">
       <keyFeatures column="//@tables.56/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_groupwithstate_internalstate" target="//@tables.5">
+      <keyFeatures column="//@tables.56/@columns.35"/>
+    </foreignKeys>
+    <foreignKeys name="etl_join_joineeport" target="//@tables.5">
+      <keyFeatures column="//@tables.56/@columns.12"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transformationstep_errorport" target="//@tables.5">
+      <keyFeatures column="//@tables.56/@columns.42"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transformationstep_inputport" target="//@tables.5">
+      <keyFeatures column="//@tables.56/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transformationstep_outputport" target="//@tables.5">
+      <keyFeatures column="//@tables.56/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="etl_union_unionport" target="//@tables.5">
+      <keyFeatures column="//@tables.56/@columns.18"/>
+    </foreignKeys>
+    <foreignKeys name="etl_sequence_context" target="//@tables.24">
+      <keyFeatures column="//@tables.56/@columns.20"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transformationstep_transformation" target="//@tables.54">
+      <keyFeatures column="//@tables.56/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="etl_groupwithstate_eventsprocessor" target="//@tables.81">
+      <keyFeatures column="//@tables.56/@columns.37"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_transition">
     <columns name="e_id">
@@ -1945,6 +2230,15 @@
     <primaryKey name="etl_transition_pk">
       <keyFeatures column="//@tables.57/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_transition_finish" target="//@tables.5">
+      <keyFeatures column="//@tables.57/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transition_start" target="//@tables.5">
+      <keyFeatures column="//@tables.57/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="etl_transition_transformation" target="//@tables.54">
+      <keyFeatures column="//@tables.57/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_userdefinedfunction">
     <columns name="e_id">
@@ -1971,6 +2265,9 @@
     <primaryKey name="etl_userdefinedfunction_pk">
       <keyFeatures column="//@tables.58/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_userdefinedfunction_project" target="//@tables.43">
+      <keyFeatures column="//@tables.58/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_wfcase">
     <columns name="e_id">
@@ -1997,6 +2294,12 @@
     <primaryKey name="etl_wfcase_pk">
       <keyFeatures column="//@tables.59/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_wfcase_decision" target="//@tables.63">
+      <keyFeatures column="//@tables.59/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfcase_to" target="//@tables.63">
+      <keyFeatures column="//@tables.59/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_wffork_paths">
     <columns name="wffork_e_id">
@@ -2012,6 +2315,12 @@
       <keyFeatures column="//@tables.60/@columns.0"/>
       <keyFeatures column="//@tables.60/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_wffork_paths" target="//@tables.63">
+      <keyFeatures column="//@tables.60/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wffork_paths_key" target="//@tables.63">
+      <keyFeatures column="//@tables.60/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_wfjava_args">
     <columns name="wfjava_args_e_id">
@@ -2027,6 +2336,9 @@
       <keyFeatures column="//@tables.61/@columns.0"/>
       <keyFeatures column="//@tables.61/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_wfjava_args_key" target="//@tables.63">
+      <keyFeatures column="//@tables.61/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_wfjava_jarfiles">
     <columns name="wfjava_jarfiles_e_id">
@@ -2042,6 +2354,9 @@
       <keyFeatures column="//@tables.62/@columns.0"/>
       <keyFeatures column="//@tables.62/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_wfjava_jarfiles_key" target="//@tables.63">
+      <keyFeatures column="//@tables.62/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_wfnode">
     <columns name="e_id">
@@ -2116,6 +2431,33 @@
     <primaryKey name="etl_wfnode_pk">
       <keyFeatures column="//@tables.63/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_wfjava_prepare" target="//@tables.42">
+      <keyFeatures column="//@tables.63/@columns.13"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfaction_sla" target="//@tables.47">
+      <keyFeatures column="//@tables.63/@columns.10"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wftransformation_transformation" target="//@tables.54">
+      <keyFeatures column="//@tables.63/@columns.11"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfaction_error" target="//@tables.63">
+      <keyFeatures column="//@tables.63/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfaction_ok" target="//@tables.63">
+      <keyFeatures column="//@tables.63/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfdecision_default" target="//@tables.63">
+      <keyFeatures column="//@tables.63/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfstart_to" target="//@tables.63">
+      <keyFeatures column="//@tables.63/@columns.7"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfnode_workflow" target="//@tables.65">
+      <keyFeatures column="//@tables.63/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="etl_wfsubworkflow_subworkflow" target="//@tables.65">
+      <keyFeatures column="//@tables.63/@columns.14"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_wfshell_args">
     <columns name="wfshell_args_e_id">
@@ -2131,6 +2473,9 @@
       <keyFeatures column="//@tables.64/@columns.0"/>
       <keyFeatures column="//@tables.64/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="etl_wfshell_args_key" target="//@tables.63">
+      <keyFeatures column="//@tables.64/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etl_workflow">
     <columns name="e_id">
@@ -2160,6 +2505,15 @@
     <primaryKey name="etl_workflow_pk">
       <keyFeatures column="//@tables.65/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etl_workflow_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.65/@columns.7"/>
+    </foreignKeys>
+    <foreignKeys name="etl_workflow_project" target="//@tables.43">
+      <keyFeatures column="//@tables.65/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="etl_workflow_sla" target="//@tables.47">
+      <keyFeatures column="//@tables.65/@columns.6"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_action">
     <columns name="e_id">
@@ -2261,6 +2615,15 @@
     <primaryKey name="etlrt_action_pk">
       <keyFeatures column="//@tables.66/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etlrt_bundlecoordjob_bundlejob" target="//@tables.73">
+      <keyFeatures column="//@tables.66/@columns.30"/>
+    </foreignKeys>
+    <foreignKeys name="etlrt_coordinatorjobaction_coordinatorjob" target="//@tables.73">
+      <keyFeatures column="//@tables.66/@columns.22"/>
+    </foreignKeys>
+    <foreignKeys name="etlrt_workflowaction_workflowjob" target="//@tables.73">
+      <keyFeatures column="//@tables.66/@columns.12"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_bundlejob_bundlecoordjobs">
     <columns name="bundlejob_e_id">
@@ -2276,6 +2639,12 @@
       <keyFeatures column="//@tables.67/@columns.0"/>
       <keyFeatures column="//@tables.67/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="fk_axhk3xp7xyxif33jubdrtiklp" target="//@tables.66">
+      <keyFeatures column="//@tables.67/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="fk_978nw032q9hftveicjq75vmky" target="//@tables.73">
+      <keyFeatures column="//@tables.67/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_contextmapping">
     <columns name="e_id">
@@ -2299,6 +2668,12 @@
     <primaryKey name="etlrt_contextmapping_pk">
       <keyFeatures column="//@tables.68/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etlrt_contextmapping_execution" target="//@tables.71">
+      <keyFeatures column="//@tables.68/@columns.2"/>
+    </foreignKeys>
+    <foreignKeys name="etlrt_contextmapping_physicalcontext" target="//@tables.74">
+      <keyFeatures column="//@tables.68/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_coordinatorjob_actions">
     <columns name="coordinatorjob_e_id">
@@ -2314,6 +2689,12 @@
       <keyFeatures column="//@tables.69/@columns.0"/>
       <keyFeatures column="//@tables.69/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="fk_god4ir4tv4nvh2lmoah9oql8u" target="//@tables.66">
+      <keyFeatures column="//@tables.69/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="fk_d3vpg67uxkn1ao0fv0r8nbv2d" target="//@tables.73">
+      <keyFeatures column="//@tables.69/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_environment">
     <columns name="e_id">
@@ -2372,6 +2753,12 @@
     <primaryKey name="etlrt_execution_pk">
       <keyFeatures column="//@tables.71/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etlrt_execution_environment" target="//@tables.70">
+      <keyFeatures column="//@tables.71/@columns.2"/>
+    </foreignKeys>
+    <foreignKeys name="etlrt_execution_workflowjob" target="//@tables.73">
+      <keyFeatures column="//@tables.71/@columns.12"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_executionparam">
     <columns name="e_id">
@@ -2395,6 +2782,9 @@
     <primaryKey name="etlrt_executionparam_pk">
       <keyFeatures column="//@tables.72/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etlrt_executionparam_execution" target="//@tables.71">
+      <keyFeatures column="//@tables.72/@columns.2"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_job">
     <columns name="e_id">
@@ -2492,6 +2882,9 @@
     <primaryKey name="etlrt_physicalcontext_pk">
       <keyFeatures column="//@tables.74/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etlrt_physicalcontext_environment" target="//@tables.70">
+      <keyFeatures column="//@tables.74/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_runtimeevent">
     <columns name="e_id">
@@ -2616,6 +3009,9 @@
     <primaryKey name="etlrt_statistic_pk">
       <keyFeatures column="//@tables.76/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="etlrt_statistic_execution" target="//@tables.71">
+      <keyFeatures column="//@tables.76/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="etlrt_workflow">
     <columns name="e_id">
@@ -2692,6 +3088,18 @@
     <primaryKey name="evs_action_pk">
       <keyFeatures column="//@tables.78/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="evs_mapvalueaction_outputfield" target="//@tables.6">
+      <keyFeatures column="//@tables.78/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="evs_mapvalueaction_valuefield" target="//@tables.6">
+      <keyFeatures column="//@tables.78/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="evs_functionaction_function" target="//@tables.80">
+      <keyFeatures column="//@tables.78/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="evs_rule_actions_key" target="//@tables.85">
+      <keyFeatures column="//@tables.78/@columns.8"/>
+    </foreignKeys>
   </tables>
   <tables name="evs_condition">
     <columns name="e_id">
@@ -2736,6 +3144,18 @@
     <primaryKey name="evs_condition_pk">
       <keyFeatures column="//@tables.79/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="evs_paramscomparecondition_rightparam" target="//@tables.6">
+      <keyFeatures column="//@tables.79/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="evs_paramstoexpressioncondition_leftparam" target="//@tables.6">
+      <keyFeatures column="//@tables.79/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="evs_logiccondition_conditions_key" target="//@tables.79">
+      <keyFeatures column="//@tables.79/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="evs_rule_conditions_key" target="//@tables.85">
+      <keyFeatures column="//@tables.79/@columns.11"/>
+    </foreignKeys>
   </tables>
   <tables name="evs_eventfunction">
     <columns name="e_id">
@@ -2768,6 +3188,15 @@
     <primaryKey name="evs_eventfunction_pk">
       <keyFeatures column="//@tables.80/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="evs_eventfunction_input" target="//@tables.5">
+      <keyFeatures column="//@tables.80/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="evs_eventfunction_output" target="//@tables.5">
+      <keyFeatures column="//@tables.80/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="evs_eventfunction_library" target="//@tables.84">
+      <keyFeatures column="//@tables.80/@columns.2"/>
+    </foreignKeys>
   </tables>
   <tables name="evs_eventsprocessor">
     <columns name="e_id">
@@ -2803,6 +3232,21 @@
     <primaryKey name="evs_eventsprocessor_pk">
       <keyFeatures column="//@tables.81/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="evs_eventsprocessor_input" target="//@tables.5">
+      <keyFeatures column="//@tables.81/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="evs_eventsprocessor_local" target="//@tables.5">
+      <keyFeatures column="//@tables.81/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="evs_eventsprocessor_output" target="//@tables.5">
+      <keyFeatures column="//@tables.81/@columns.7"/>
+    </foreignKeys>
+    <foreignKeys name="evs_eventsprocessor_state" target="//@tables.5">
+      <keyFeatures column="//@tables.81/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="evs_eventsprocessor_project" target="//@tables.43">
+      <keyFeatures column="//@tables.81/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="evs_functionoutputmapping">
     <columns name="e_id">
@@ -2826,6 +3270,15 @@
     <primaryKey name="evs_functionoutputmapping_pk">
       <keyFeatures column="//@tables.82/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="evs_functionoutputmapping_param" target="//@tables.6">
+      <keyFeatures column="//@tables.82/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="evs_functionoutputmapping_value" target="//@tables.6">
+      <keyFeatures column="//@tables.82/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="evs_functionoutputmapping_action" target="//@tables.78">
+      <keyFeatures column="//@tables.82/@columns.2"/>
+    </foreignKeys>
   </tables>
   <tables name="evs_functionparamsmapping">
     <columns name="e_id">
@@ -2849,6 +3302,15 @@
     <primaryKey name="evs_functionparamsmapping_pk">
       <keyFeatures column="//@tables.83/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="evs_functionparamsmapping_param" target="//@tables.6">
+      <keyFeatures column="//@tables.83/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="evs_functionparamsmapping_value" target="//@tables.6">
+      <keyFeatures column="//@tables.83/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="evs_functionparamsmapping_action" target="//@tables.78">
+      <keyFeatures column="//@tables.83/@columns.2"/>
+    </foreignKeys>
   </tables>
   <tables name="evs_functionslibrary">
     <columns name="e_id">
@@ -2901,6 +3363,12 @@
     <primaryKey name="evs_rule_pk">
       <keyFeatures column="//@tables.85/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="evs_rule_condition" target="//@tables.79">
+      <keyFeatures column="//@tables.85/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="evs_eventsprocessor_rules_key" target="//@tables.81">
+      <keyFeatures column="//@tables.85/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="evs_whentimeoutcondition">
     <columns name="e_id">
@@ -2980,6 +3448,18 @@
     <primaryKey name="mspace_file_pk">
       <keyFeatures column="//@tables.87/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="mspace_metaserver_groovyscriptbases_key" target="//@tables.89">
+      <keyFeatures column="//@tables.87/@columns.16"/>
+    </foreignKeys>
+    <foreignKeys name="mspace_metaserver_scripts_key" target="//@tables.89">
+      <keyFeatures column="//@tables.87/@columns.14"/>
+    </foreignKeys>
+    <foreignKeys name="mspace_flockscript_source" target="//@tables.93">
+      <keyFeatures column="//@tables.87/@columns.12"/>
+    </foreignKeys>
+    <foreignKeys name="mspace_flockscript_target" target="//@tables.93">
+      <keyFeatures column="//@tables.87/@columns.13"/>
+    </foreignKeys>
   </tables>
   <tables name="mspace_metamodeluri">
     <columns name="e_id">
@@ -3009,6 +3489,9 @@
     <primaryKey name="mspace_metamodeluri_pk">
       <keyFeatures column="//@tables.88/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="mspace_emfmodel_mmuris_key" target="//@tables.92">
+      <keyFeatures column="//@tables.88/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="mspace_metaserver">
     <columns name="e_id">
@@ -3038,6 +3521,12 @@
       <keyFeatures column="//@tables.90/@columns.0"/>
       <keyFeatures column="//@tables.90/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="mspace_metaserver_persistent_key" target="//@tables.89">
+      <keyFeatures column="//@tables.90/@columns.0"/>
+    </foreignKeys>
+    <foreignKeys name="mspace_metaserver_persistent" target="//@tables.92">
+      <keyFeatures column="//@tables.90/@columns.1"/>
+    </foreignKeys>
   </tables>
   <tables name="mspace_metaserver_registeronstartup">
     <columns name="metaserver_e_id">
@@ -3053,6 +3542,12 @@
       <keyFeatures column="//@tables.91/@columns.0"/>
       <keyFeatures column="//@tables.91/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="mspace_metaserver_registeronstartup_key" target="//@tables.89">
+      <keyFeatures column="//@tables.91/@columns.0"/>
+    </foreignKeys>
+    <foreignKeys name="mspace_metaserver_registeronstartup" target="//@tables.92">
+      <keyFeatures column="//@tables.91/@columns.1"/>
+    </foreignKeys>
   </tables>
   <tables name="mspace_model">
     <columns name="e_id">
@@ -3097,6 +3592,9 @@
     <primaryKey name="mspace_model_pk">
       <keyFeatures column="//@tables.92/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="mspace_metaserver_models_key" target="//@tables.89">
+      <keyFeatures column="//@tables.92/@columns.8"/>
+    </foreignKeys>
   </tables>
   <tables name="mspace_modelparameter">
     <columns name="e_id">
@@ -3141,6 +3639,15 @@
     <primaryKey name="mspace_modelparameter_pk">
       <keyFeatures column="//@tables.93/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="mspace_epsilonscript_models_key" target="//@tables.87">
+      <keyFeatures column="//@tables.93/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="mspace_emfmodelparameter_emfmodel" target="//@tables.92">
+      <keyFeatures column="//@tables.93/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="mspace_registeredmodelparameter_registeredmodel" target="//@tables.92">
+      <keyFeatures column="//@tables.93/@columns.7"/>
+    </foreignKeys>
   </tables>
   <tables name="mspace_stringparameter">
     <columns name="e_id">
@@ -3173,6 +3680,9 @@
     <primaryKey name="mspace_stringparameter_pk">
       <keyFeatures column="//@tables.94/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="mspace_script_parameters_key" target="//@tables.87">
+      <keyFeatures column="//@tables.94/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rel_catalog">
     <columns name="e_id">
@@ -3216,6 +3726,12 @@
     <primaryKey name="rel_column_pk">
       <keyFeatures column="//@tables.96/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rel_column_dataset" target="//@tables.98">
+      <keyFeatures column="//@tables.96/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="fk_67jmdu4c116xfnuhvb48n7k28" target="//@tables.103">
+      <keyFeatures column="//@tables.96/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rel_constraint">
     <columns name="e_id">
@@ -3280,6 +3796,18 @@
     <primaryKey name="rel_dataset_pk">
       <keyFeatures column="//@tables.98/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="fk_o6bgiei5810a4i9scco630mlm" target="//@tables.100">
+      <keyFeatures column="//@tables.98/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="rel_storedprocedure_scheme" target="//@tables.102">
+      <keyFeatures column="//@tables.98/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="rel_table_scheme" target="//@tables.102">
+      <keyFeatures column="//@tables.98/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rel_view_scheme" target="//@tables.102">
+      <keyFeatures column="//@tables.98/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="rel_domain">
     <columns name="e_id">
@@ -3303,6 +3831,12 @@
     <primaryKey name="rel_domain_pk">
       <keyFeatures column="//@tables.99/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rel_domain_catalog" target="//@tables.95">
+      <keyFeatures column="//@tables.99/@columns.2"/>
+    </foreignKeys>
+    <foreignKeys name="rel_domain_datatype" target="//@tables.103">
+      <keyFeatures column="//@tables.99/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rel_key">
     <columns name="e_id">
@@ -3344,6 +3878,15 @@
     <primaryKey name="rel_key_pk">
       <keyFeatures column="//@tables.100/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rel_foreignkey_table" target="//@tables.98">
+      <keyFeatures column="//@tables.100/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="rel_foreignkey_target" target="//@tables.98">
+      <keyFeatures column="//@tables.100/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="rel_table_indexes_key" target="//@tables.98">
+      <keyFeatures column="//@tables.100/@columns.6"/>
+    </foreignKeys>
   </tables>
   <tables name="rel_keyfeature">
     <columns name="e_id">
@@ -3364,6 +3907,12 @@
     <primaryKey name="rel_keyfeature_pk">
       <keyFeatures column="//@tables.101/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rel_keyfeature_column" target="//@tables.96">
+      <keyFeatures column="//@tables.101/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rel_keyfeature_key" target="//@tables.100">
+      <keyFeatures column="//@tables.101/@columns.2"/>
+    </foreignKeys>
   </tables>
   <tables name="rel_scheme">
     <columns name="e_id">
@@ -3393,6 +3942,9 @@
     <primaryKey name="rel_scheme_pk">
       <keyFeatures column="//@tables.102/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rel_catalog_schemas_key" target="//@tables.95">
+      <keyFeatures column="//@tables.102/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="rel_sqlsimpletype">
     <columns name="e_id">
@@ -3413,6 +3965,9 @@
     <primaryKey name="rel_sqlsimpletype_pk">
       <keyFeatures column="//@tables.103/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rel_sqltype_domain" target="//@tables.99">
+      <keyFeatures column="//@tables.103/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_atlas">
     <columns name="e_id">
@@ -3439,6 +3994,9 @@
     <primaryKey name="rt_atlas_pk">
       <keyFeatures column="//@tables.104/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_atlas_project" target="//@tables.43">
+      <keyFeatures column="//@tables.104/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_atlasproject">
     <columns name="e_id">
@@ -3459,6 +4017,12 @@
     <primaryKey name="rt_atlasproject_pk">
       <keyFeatures column="//@tables.105/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_atlasproject_project" target="//@tables.43">
+      <keyFeatures column="//@tables.105/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_atlasproject_atlas" target="//@tables.104">
+      <keyFeatures column="//@tables.105/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_atlasscheme">
     <columns name="e_id">
@@ -3479,6 +4043,12 @@
     <primaryKey name="rt_atlasscheme_pk">
       <keyFeatures column="//@tables.106/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_atlasscheme_scheme" target="//@tables.102">
+      <keyFeatures column="//@tables.106/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_atlasscheme_atlas" target="//@tables.104">
+      <keyFeatures column="//@tables.106/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_backoffpolicy">
     <columns name="e_id">
@@ -3555,6 +4125,9 @@
     <primaryKey name="rt_connection_pk">
       <keyFeatures column="//@tables.108/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_connection_project" target="//@tables.43">
+      <keyFeatures column="//@tables.108/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_deployment">
     <columns name="e_id">
@@ -3581,6 +4154,15 @@
     <primaryKey name="rt_deployment_pk">
       <keyFeatures column="//@tables.109/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_deployment_project" target="//@tables.43">
+      <keyFeatures column="//@tables.109/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_deployment_connection" target="//@tables.108">
+      <keyFeatures column="//@tables.109/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="rt_deployment_softwaresystem" target="//@tables.124">
+      <keyFeatures column="//@tables.109/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_environment">
     <columns name="e_id">
@@ -3642,6 +4224,9 @@
     <primaryKey name="rt_environmentparameter_pk">
       <keyFeatures column="//@tables.111/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_environment_parameters_key" target="//@tables.110">
+      <keyFeatures column="//@tables.111/@columns.8"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_importentity">
     <columns name="e_id">
@@ -3701,6 +4286,9 @@
     <primaryKey name="rt_importentity_pk">
       <keyFeatures column="//@tables.112/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_importentity_wizard" target="//@tables.113">
+      <keyFeatures column="//@tables.112/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_importwizard">
     <columns name="e_id">
@@ -3757,6 +4345,18 @@
     <primaryKey name="rt_importwizard_pk">
       <keyFeatures column="//@tables.113/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_importwizard_jdbccontext" target="//@tables.24">
+      <keyFeatures column="//@tables.113/@columns.16"/>
+    </foreignKeys>
+    <foreignKeys name="rt_importwizard_project" target="//@tables.43">
+      <keyFeatures column="//@tables.113/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_importwizard_jdbcconnection" target="//@tables.108">
+      <keyFeatures column="//@tables.113/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="rt_importwizard_oozie" target="//@tables.119">
+      <keyFeatures column="//@tables.113/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_jobdeployment">
     <columns name="e_id">
@@ -3831,6 +4431,21 @@
     <primaryKey name="rt_jobdeployment_pk">
       <keyFeatures column="//@tables.114/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_jobdeployment_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.114/@columns.17"/>
+    </foreignKeys>
+    <foreignKeys name="rt_coordinatordeployment_coordinator" target="//@tables.22">
+      <keyFeatures column="//@tables.114/@columns.21"/>
+    </foreignKeys>
+    <foreignKeys name="rt_jobdeployment_project" target="//@tables.43">
+      <keyFeatures column="//@tables.114/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_workflowdeployment_start" target="//@tables.65">
+      <keyFeatures column="//@tables.114/@columns.19"/>
+    </foreignKeys>
+    <foreignKeys name="rt_jobdeployment_oozie" target="//@tables.119">
+      <keyFeatures column="//@tables.114/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_jobdeployment_deployments">
     <columns name="jobdeployment_e_id">
@@ -3846,6 +4461,12 @@
       <keyFeatures column="//@tables.115/@columns.0"/>
       <keyFeatures column="//@tables.115/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="rt_jobdeployment_deployments" target="//@tables.109">
+      <keyFeatures column="//@tables.115/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="rt_jobdeployment_deployments_key" target="//@tables.114">
+      <keyFeatures column="//@tables.115/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_jobdeployment_workflows">
     <columns name="jobdeployment_e_id">
@@ -3861,6 +4482,12 @@
       <keyFeatures column="//@tables.116/@columns.0"/>
       <keyFeatures column="//@tables.116/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="rt_jobdeployment_workflows" target="//@tables.65">
+      <keyFeatures column="//@tables.116/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="rt_jobdeployment_workflows_key" target="//@tables.114">
+      <keyFeatures column="//@tables.116/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_jobserver">
     <columns name="e_id">
@@ -3896,6 +4523,9 @@
     <primaryKey name="rt_jobserver_pk">
       <keyFeatures column="//@tables.117/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_jobserver_project" target="//@tables.43">
+      <keyFeatures column="//@tables.117/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_livyserver">
     <columns name="e_id">
@@ -3949,6 +4579,9 @@
     <primaryKey name="rt_livyserver_pk">
       <keyFeatures column="//@tables.118/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_livyserver_project" target="//@tables.43">
+      <keyFeatures column="//@tables.118/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_oozie">
     <columns name="e_id">
@@ -4041,6 +4674,9 @@
     <primaryKey name="rt_oozie_pk">
       <keyFeatures column="//@tables.119/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_oozie_project" target="//@tables.43">
+      <keyFeatures column="//@tables.119/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_retryableexception">
     <columns name="e_id">
@@ -4073,6 +4709,9 @@
     <primaryKey name="rt_retryableexception_pk">
       <keyFeatures column="//@tables.120/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_simpleretrypolicy_retryableexceptions_key" target="//@tables.121">
+      <keyFeatures column="//@tables.120/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_retrypolicy">
     <columns name="e_id">
@@ -4158,6 +4797,21 @@
     <primaryKey name="rt_scheduledtask_pk">
       <keyFeatures column="//@tables.122/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_scheduledtask_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.122/@columns.17"/>
+    </foreignKeys>
+    <foreignKeys name="rt_scheduledtask_project" target="//@tables.43">
+      <keyFeatures column="//@tables.122/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_scheduledtask_backoffpolicy" target="//@tables.107">
+      <keyFeatures column="//@tables.122/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="rt_scheduledtask_retrypolicy" target="//@tables.121">
+      <keyFeatures column="//@tables.122/@columns.10"/>
+    </foreignKeys>
+    <foreignKeys name="rt_scheduledtask_scheduler" target="//@tables.123">
+      <keyFeatures column="//@tables.122/@columns.8"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_scheduler">
     <columns name="e_id">
@@ -4216,6 +4870,15 @@
     <primaryKey name="rt_softwaresystem_pk">
       <keyFeatures column="//@tables.124/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_softwaresystem_project" target="//@tables.43">
+      <keyFeatures column="//@tables.124/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_softwaresystem_scheme" target="//@tables.102">
+      <keyFeatures column="//@tables.124/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="rt_softwaresystem_defaultdeployment" target="//@tables.109">
+      <keyFeatures column="//@tables.124/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_sparkoption">
     <columns name="e_id">
@@ -4254,6 +4917,12 @@
     <primaryKey name="rt_sparkoption_pk">
       <keyFeatures column="//@tables.125/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_importentity_sparkopts_key" target="//@tables.112">
+      <keyFeatures column="//@tables.125/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="rt_jobdeployment_sparkopts_key" target="//@tables.114">
+      <keyFeatures column="//@tables.125/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_transformationdeployment">
     <columns name="e_id">
@@ -4319,6 +4988,18 @@
     <primaryKey name="rt_transformationdeployment_pk">
       <keyFeatures column="//@tables.126/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_transformationdeployment_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.126/@columns.19"/>
+    </foreignKeys>
+    <foreignKeys name="rt_transformationdeployment_project" target="//@tables.43">
+      <keyFeatures column="//@tables.126/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="rt_transformationdeployment_transformation" target="//@tables.54">
+      <keyFeatures column="//@tables.126/@columns.5"/>
+    </foreignKeys>
+    <foreignKeys name="rt_transformationdeployment_livyserver" target="//@tables.118">
+      <keyFeatures column="//@tables.126/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_transformationdeployment_deployments">
     <columns name="transformationdeployment_e_id">
@@ -4334,6 +5015,12 @@
       <keyFeatures column="//@tables.127/@columns.0"/>
       <keyFeatures column="//@tables.127/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="rt_transformationdeployment_deployments" target="//@tables.109">
+      <keyFeatures column="//@tables.127/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="rt_transformationdeployment_deployments_key" target="//@tables.126">
+      <keyFeatures column="//@tables.127/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="rt_zeppelin">
     <columns name="e_id">
@@ -4360,6 +5047,9 @@
     <primaryKey name="rt_zeppelin_pk">
       <keyFeatures column="//@tables.128/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="rt_zeppelin_project" target="//@tables.43">
+      <keyFeatures column="//@tables.128/@columns.3"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_abstractdataset">
     <columns name="e_id">
@@ -4428,6 +5118,21 @@
     <primaryKey name="sse_abstractdataset_pk">
       <keyFeatures column="//@tables.129/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_abstractdataset_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.129/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="sse_jdbcdataset_connection" target="//@tables.108">
+      <keyFeatures column="//@tables.129/@columns.14"/>
+    </foreignKeys>
+    <foreignKeys name="sse_linkeddataset_linkto" target="//@tables.129">
+      <keyFeatures column="//@tables.129/@columns.18"/>
+    </foreignKeys>
+    <foreignKeys name="sse_abstractdataset_permissions" target="//@tables.143">
+      <keyFeatures column="//@tables.129/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="sse_abstractdataset_workspace" target="//@tables.147">
+      <keyFeatures column="//@tables.129/@columns.7"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_abstractdataset_partitionbycols">
     <columns name="abstractdataset_partitionbycols_e_id">
@@ -4443,6 +5148,9 @@
       <keyFeatures column="//@tables.130/@columns.0"/>
       <keyFeatures column="//@tables.130/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="sse_abstractdataset_partitionbycols_key" target="//@tables.131">
+      <keyFeatures column="//@tables.130/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_abstractnode">
     <columns name="e_id">
@@ -4517,6 +5225,24 @@
     <primaryKey name="sse_abstractnode_pk">
       <keyFeatures column="//@tables.131/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_abstractnode_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.131/@columns.10"/>
+    </foreignKeys>
+    <foreignKeys name="sse_abstractnode_project" target="//@tables.43">
+      <keyFeatures column="//@tables.131/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="sse_jdbcdataset_connection" target="//@tables.108">
+      <keyFeatures column="//@tables.131/@columns.15"/>
+    </foreignKeys>
+    <foreignKeys name="sse_linkeddataset_linkto" target="//@tables.131">
+      <keyFeatures column="//@tables.131/@columns.19"/>
+    </foreignKeys>
+    <foreignKeys name="sse_abstractnode_permissions" target="//@tables.143">
+      <keyFeatures column="//@tables.131/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="sse_abstractnode_workspace" target="//@tables.147">
+      <keyFeatures column="//@tables.131/@columns.7"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_abstractnode_datasets">
     <columns name="abstractnode_e_id">
@@ -4532,6 +5258,12 @@
       <keyFeatures column="//@tables.132/@columns.0"/>
       <keyFeatures column="//@tables.132/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="sse_abstractnode_datasets" target="//@tables.131">
+      <keyFeatures column="//@tables.132/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="sse_abstractnode_datasets_key" target="//@tables.131">
+      <keyFeatures column="//@tables.132/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_column">
     <columns name="e_id">
@@ -4576,6 +5308,18 @@
     <primaryKey name="sse_column_pk">
       <keyFeatures column="//@tables.133/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_abstractdataset_columns_key" target="//@tables.131">
+      <keyFeatures column="//@tables.133/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="sse_column_columntype" target="//@tables.135">
+      <keyFeatures column="//@tables.133/@columns.3"/>
+    </foreignKeys>
+    <foreignKeys name="sse_structtype_columns_key" target="//@tables.135">
+      <keyFeatures column="//@tables.133/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="sse_tableresult_columns_key" target="//@tables.142">
+      <keyFeatures column="//@tables.133/@columns.8"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_columnagg">
     <columns name="e_id">
@@ -4608,6 +5352,9 @@
     <primaryKey name="sse_columnagg_pk">
       <keyFeatures column="//@tables.134/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_tableresult_axisy_key" target="//@tables.142">
+      <keyFeatures column="//@tables.134/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_columntype">
     <columns name="e_id">
@@ -4649,6 +5396,9 @@
     <primaryKey name="sse_columntype_pk">
       <keyFeatures column="//@tables.135/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_arraytype_elementtype" target="//@tables.135">
+      <keyFeatures column="//@tables.135/@columns.8"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_dataset_datasets">
     <columns name="dataset_e_id">
@@ -4664,6 +5414,12 @@
       <keyFeatures column="//@tables.136/@columns.0"/>
       <keyFeatures column="//@tables.136/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="sse_dataset_datasets" target="//@tables.129">
+      <keyFeatures column="//@tables.136/@columns.1"/>
+    </foreignKeys>
+    <foreignKeys name="sse_dataset_datasets_key" target="//@tables.129">
+      <keyFeatures column="//@tables.136/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_hadoopcluster">
     <columns name="e_id">
@@ -4702,6 +5458,21 @@
     <primaryKey name="sse_hadoopcluster_pk">
       <keyFeatures column="//@tables.137/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_hadoopcluster_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.137/@columns.10"/>
+    </foreignKeys>
+    <foreignKeys name="sse_hadoopcluster_project" target="//@tables.43">
+      <keyFeatures column="//@tables.137/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="sse_hadoopcluster_hiveconnection" target="//@tables.108">
+      <keyFeatures column="//@tables.137/@columns.6"/>
+    </foreignKeys>
+    <foreignKeys name="sse_hadoopcluster_referenceconnection" target="//@tables.108">
+      <keyFeatures column="//@tables.137/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="sse_hadoopcluster_livyserver" target="//@tables.118">
+      <keyFeatures column="//@tables.137/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_model">
     <columns name="e_id">
@@ -4743,6 +5514,15 @@
     <primaryKey name="sse_model_pk">
       <keyFeatures column="//@tables.138/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_model_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.138/@columns.11"/>
+    </foreignKeys>
+    <foreignKeys name="sse_model_project" target="//@tables.43">
+      <keyFeatures column="//@tables.138/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="sse_model_livyserver" target="//@tables.118">
+      <keyFeatures column="//@tables.138/@columns.5"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_notebook">
     <columns name="e_id">
@@ -4775,6 +5555,12 @@
     <primaryKey name="sse_notebook_pk">
       <keyFeatures column="//@tables.139/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_notebook_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.139/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="sse_notebook_workspace" target="//@tables.147">
+      <keyFeatures column="//@tables.139/@columns.7"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_paragraph">
     <columns name="e_id">
@@ -4852,6 +5638,18 @@
     <primaryKey name="sse_paragraph_pk">
       <keyFeatures column="//@tables.140/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_notebook_paragraphs_key" target="//@tables.131">
+      <keyFeatures column="//@tables.140/@columns.15"/>
+    </foreignKeys>
+    <foreignKeys name="sse_paragraph_notebook" target="//@tables.139">
+      <keyFeatures column="//@tables.140/@columns.20"/>
+    </foreignKeys>
+    <foreignKeys name="sse_paragraph_body" target="//@tables.141">
+      <keyFeatures column="//@tables.140/@columns.4"/>
+    </foreignKeys>
+    <foreignKeys name="sse_paragraph_result" target="//@tables.142">
+      <keyFeatures column="//@tables.140/@columns.14"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_paragraphbody">
     <columns name="e_id">
@@ -4884,6 +5682,9 @@
     <primaryKey name="sse_paragraphbody_pk">
       <keyFeatures column="//@tables.141/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_linkbody_linknotebook" target="//@tables.131">
+      <keyFeatures column="//@tables.141/@columns.4"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_paragraphresult">
     <columns name="e_id">
@@ -4972,6 +5773,9 @@
       <keyFeatures column="//@tables.144/@columns.0"/>
       <keyFeatures column="//@tables.144/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="sse_referencedataset_primarykeycols_key" target="//@tables.131">
+      <keyFeatures column="//@tables.144/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_tableresult_axisx">
     <columns name="tableresult_axisx_e_id">
@@ -4987,6 +5791,9 @@
       <keyFeatures column="//@tables.145/@columns.0"/>
       <keyFeatures column="//@tables.145/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="sse_tableresult_axisx_key" target="//@tables.142">
+      <keyFeatures column="//@tables.145/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_tableresult_groups">
     <columns name="tableresult_groups_e_id">
@@ -5002,6 +5809,9 @@
       <keyFeatures column="//@tables.146/@columns.0"/>
       <keyFeatures column="//@tables.146/@columns.2"/>
     </primaryKey>
+    <foreignKeys name="sse_tableresult_groups_key" target="//@tables.142">
+      <keyFeatures column="//@tables.146/@columns.0"/>
+    </foreignKeys>
   </tables>
   <tables name="sse_workspace">
     <columns name="e_id">
@@ -5046,5 +5856,20 @@
     <primaryKey name="sse_workspace_pk">
       <keyFeatures column="//@tables.147/@columns.0"/>
     </primaryKey>
+    <foreignKeys name="sse_workspace_auditinfo" target="//@tables.0">
+      <keyFeatures column="//@tables.147/@columns.10"/>
+    </foreignKeys>
+    <foreignKeys name="sse_workspace_project" target="//@tables.43">
+      <keyFeatures column="//@tables.147/@columns.9"/>
+    </foreignKeys>
+    <foreignKeys name="sse_jdbcworkspace_connection" target="//@tables.108">
+      <keyFeatures column="//@tables.147/@columns.11"/>
+    </foreignKeys>
+    <foreignKeys name="sse_workspace_cluster" target="//@tables.137">
+      <keyFeatures column="//@tables.147/@columns.8"/>
+    </foreignKeys>
+    <foreignKeys name="sse_workspace_parent" target="//@tables.147">
+      <keyFeatures column="//@tables.147/@columns.7"/>
+    </foreignKeys>
   </tables>
 </rel:Scheme>
