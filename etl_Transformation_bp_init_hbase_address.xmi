@@ -21,5 +21,5 @@
     </outputPort>
   </sources>
   <transitions name="8db2ea72-873f-49c6-963e-1b92787719c8" start="//@sources.0/@outputPort" finish="//@targets.0/@inputPort"/>
-  <auditInfo changeUser="arch7tect" changeDateTime="2019-04-15T11:30:40.743+0300" createUser="orlov" createDateTime="2019-03-27T14:03:14.552+0300"/>
+  <auditInfo changeUser="arch7tect" changeDateTime="2019-04-17T10:27:16.419+0300" createUser="arch7tect" createDateTime="2019-04-17T10:27:13.167+0300"/>
 </etl:Transformation>
