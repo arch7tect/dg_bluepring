@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:Notebook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ModelingPD_BAI_Modelling" shortName="Modelling" description="The place where things happen">
-  <auditInfo changeUser="mtugushev" changeDateTime="2019-05-13T14:10:54.634+0300" createUser="admin" createDateTime="2019-01-29T14:24:57.385+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-05-13T13:43:30.265+0300" createUser="admin" createDateTime="2019-01-29T14:24:57.385+0300"/>
   <paragraphs name="ModelingPD_BAI_Modelling_2019-02-21T11:13:54.010" textVisible="true" resultVisible="false" titleVisible="true" status="ERROR">
     <body xsi:type="sse:CodeBody" interpreter="R" text="ls.str()"/>
     <result xsi:type="sse:ErrorResult" ename="Livy server error" evalue="" traceback="HTTP/1.1 404 Not Found"/>

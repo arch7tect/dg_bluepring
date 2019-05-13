@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:Dataset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ModelingPD_BAI_adWriteOffContracts" shortName="adWriteOffContracts" description="Additional Data" expression="val contacts = spark.sql(&quot;SELECT * FROM writeoff&quot;).withColumn(&#xA;        &quot;id_account&quot;,&#xA;        (col(&quot;id_account&quot;).cast(&quot;Long&quot;))&#xA;    )&#xA;contacts">
-  <auditInfo changeUser="mtugushev" changeDateTime="2019-05-13T14:10:16.124+0300" createUser="admin" createDateTime="2019-02-11T11:27:41.343+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-05-13T13:43:13.742+0300" createUser="admin" createDateTime="2019-02-11T11:27:41.343+0300"/>
   <columns columnName="id_entity">
     <columnType xsi:type="sse:ScalarType" isNullable="true" dataType="STRING" nativeType="string"/>
   </columns>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:HiveDataset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ModelingPD_BAI_rcdataForbearance" shortName="rcdataForbearance" db="default" table="rcdataForbearance">
-  <auditInfo changeUser="mtugushev" changeDateTime="2019-05-13T14:08:16.216+0300" createUser="admin" createDateTime="2019-01-29T14:21:35.125+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-05-13T13:40:00.788+0300" createUser="admin" createDateTime="2019-01-29T14:21:35.125+0300"/>
   <columns columnName="d_referencedate">
     <columnType xsi:type="sse:ScalarType" isNullable="true" dataType="INTEGER" nativeType="int"/>
   </columns>

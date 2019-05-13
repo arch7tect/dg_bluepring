@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:Notebook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ModelingPD_BAI_FunctionLibrary" shortName="FunctionLibrary" description="">
-  <auditInfo changeUser="mtugushev" changeDateTime="2019-05-13T14:08:57.226+0300" createUser="admin" createDateTime="2019-01-29T11:36:22.800+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-05-13T13:39:15.515+0300" createUser="admin" createDateTime="2019-01-29T11:36:22.800+0300"/>
   <paragraphs name="ModelingPD_BAI_FunctionLibrary_2019-05-02T12:30:43.664" textVisible="true" resultVisible="true" titleVisible="true">
     <body xsi:type="sse:CodeBody"/>
   </paragraphs>
