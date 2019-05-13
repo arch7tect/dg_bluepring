@@ -314,5 +314,5 @@
   <transitions name="b1a8f155-248c-41e8-9136-2c6c5f563fdd" start="//@transformationSteps.1/@outputPort" finish="//@transformationSteps.2/@sqlPorts.0"/>
   <transitions name="47cc8700-4206-4346-a8fd-8147e788ee98" start="//@transformationSteps.2/@outputPort" finish="//@targets.0/@inputPort"/>
   <transitions name="6ba03f60-f178-4c8c-8b0a-5b6b3e794d00" start="//@sources.3/@outputPort" finish="//@transformationSteps.2/@sqlPorts.1"/>
-  <auditInfo changeUser="arch7tect" changeDateTime="2019-04-17T11:27:51.897+0300" createUser="admin" createDateTime="2017-11-21T12:10:27.683+0300"/>
+  <auditInfo changeUser="arch7tect" changeDateTime="2019-04-19T18:28:34.455+0300" createUser="admin" createDateTime="2017-11-21T12:10:27.683+0300"/>
 </etl:Transformation>
