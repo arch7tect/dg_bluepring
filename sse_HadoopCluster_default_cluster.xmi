@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sse:HadoopCluster xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sse="http://www.neoflex.ru/meta/sse" name="default_cluster" shortName="test" description="test" hiveMetastoreUri="thrift://localhost:9083">
+  <auditInfo changeUser="mtugushev" changeDateTime="2019-05-13T13:49:55.698+0300" createUser="admin" createDateTime="2019-01-14T17:16:13.334+0300"/>
+</sse:HadoopCluster>
