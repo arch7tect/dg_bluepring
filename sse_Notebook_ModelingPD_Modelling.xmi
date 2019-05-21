@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:Notebook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ModelingPD_Modelling" shortName="Modelling" description="The place where things happen">
-  <auditInfo changeUser="mtugushev" changeDateTime="2019-05-14T17:29:35.897+0300" createUser="mtugushev" createDateTime="2019-05-13T18:36:59.727+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-05-21T18:32:20.680+0300" createUser="mtugushev" createDateTime="2019-05-13T18:36:59.727+0300"/>
   <paragraphs name="ModelingPD_BAI_Modelling_2019-02-26T18:27:25.972" title="Libraries" textVisible="true" resultVisible="false" titleVisible="true" status="SUCCESS">
     <body xsi:type="sse:CodeBody" interpreter="R" text="library(bit64)&#xA;library(RColorBrewer)&#xA;library(stringr)"/>
     <result xsi:type="sse:TextResult" data=""/>
