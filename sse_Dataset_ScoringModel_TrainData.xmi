@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sse:Dataset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ScoringModel_TrainData" shortName="TrainData">
+  <auditInfo changeUser="psimanihin" changeDateTime="2019-06-18T18:19:39.686+0300" createUser="psimanihin" createDateTime="2019-06-17T11:39:22.734+0300"/>
+</sse:Dataset>
