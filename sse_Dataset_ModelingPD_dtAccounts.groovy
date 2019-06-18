@@ -4,5 +4,5 @@ def entity = session.createQuery("from sse.Dataset where name = :name").setParam
 entity.datasets.clear()
 entity.workspace = session.createQuery("from sse.AnalyticWorkspace where name = :name").setParameter("name", "ModelingPD").uniqueResult()
 entity.project = session.createQuery("from etl.Project where name = :name").setParameter("name", "blueprint_git").uniqueResult()
-entity.datasets.add(session.createQuery("from sse.HiveDataset where name = :name").setParameter("name", "ModelingPD_rcdataAccounts").uniqueResult())
+entity.datasetType = null
 Context.current.commit()

@@ -1229,5 +1229,5 @@
   <transitions name="e4453775-1cf2-4e72-aff4-988a7c5f4aea" start="//@sources.0/@outputPort" finish="//@targets.0/@inputPort"/>
   <transitions name="233598d9-343a-41be-9e15-4e27d13e3403" start="//@sources.2/@outputPort" finish="//@transformationSteps.0/@inputPort"/>
   <transitions name="e341e4ec-0c14-4343-842b-454c5e215c8a" start="//@transformationSteps.0/@outputPort" finish="//@targets.2/@inputPort"/>
-  <auditInfo changeUser="admin" changeDateTime="2019-05-22T10:42:19.403+0300" createUser="admin" createDateTime="2019-05-21T18:31:56.755+0300"/>
+  <auditInfo changeUser="orlov" changeDateTime="2019-05-31T17:10:41.526+0300" createUser="admin" createDateTime="2019-05-21T18:31:56.755+0300"/>
 </etl:Transformation>

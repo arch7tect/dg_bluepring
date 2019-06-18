@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="ASCII"?>
+<etl:Transformation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:etl="http://www.neoflex.ru/meta/etl" name="BELFIUS_applications" label="BELFIUS_applications" jsonView="{&quot;cells&quot;:[{&quot;type&quot;:&quot;devs.transformation.XMLSource&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[],&quot;outPorts&quot;:[&quot;out&quot;],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;out&quot;,&quot;group&quot;:&quot;out&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;out&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:103,&quot;y&quot;:108},&quot;angle&quot;:0,&quot;id&quot;:&quot;751bc954-f6b5-4ee6-8e68-292765ee9a90&quot;,&quot;name&quot;:&quot;DS_XML_REQ&quot;,&quot;z&quot;:1,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;DS_XML_REQ&quot;}}},{&quot;type&quot;:&quot;devs.transformation.LocalSource&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[],&quot;outPorts&quot;:[&quot;out&quot;],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;out&quot;,&quot;group&quot;:&quot;out&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;out&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:510,&quot;y&quot;:300},&quot;angle&quot;:0,&quot;id&quot;:&quot;30690c9c-ff9f-48bb-81d2-cefa99b62ed2&quot;,&quot;name&quot;:&quot;PRODUCT_CATALOG&quot;,&quot;z&quot;:2,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;PRODUCT_CATALOG&quot;}}},{&quot;type&quot;:&quot;devs.transformation.drools&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[&quot;in&quot;],&quot;outPorts&quot;:[&quot;out&quot;],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;in&quot;,&quot;group&quot;:&quot;in&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;in&quot;}}},{&quot;id&quot;:&quot;out&quot;,&quot;group&quot;:&quot;out&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;out&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:270,&quot;y&quot;:180},&quot;angle&quot;:0,&quot;id&quot;:&quot;55dd17ca-eab4-4a31-89a1-5f640429a384&quot;,&quot;name&quot;:&quot;Drools_Apply_Strategy&quot;,&quot;z&quot;:3,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;Drools_Apply_Strategy&quot;}}},{&quot;type&quot;:&quot;devs.transformation.Aggregation&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[&quot;in&quot;],&quot;outPorts&quot;:[&quot;out&quot;],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;in&quot;,&quot;group&quot;:&quot;in&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;in&quot;}}},{&quot;id&quot;:&quot;out&quot;,&quot;group&quot;:&quot;out&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;out&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:480,&quot;y&quot;:120},&quot;angle&quot;:0,&quot;id&quot;:&quot;51e3e86f-4b39-44b8-b2f4-ecc96d27c809&quot;,&quot;name&quot;:&quot;DS_AGGR_RESP&quot;,&quot;z&quot;:4,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;DS_AGGR_RESP&quot;}}},{&quot;type&quot;:&quot;devs.transformation.Join&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[&quot;in&quot;,&quot;join&quot;],&quot;outPorts&quot;:[&quot;out&quot;],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;in&quot;,&quot;group&quot;:&quot;in&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;in&quot;}}},{&quot;id&quot;:&quot;join&quot;,&quot;group&quot;:&quot;in&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;join&quot;}}},{&quot;id&quot;:&quot;out&quot;,&quot;group&quot;:&quot;out&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;out&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:660,&quot;y&quot;:210},&quot;angle&quot;:0,&quot;id&quot;:&quot;30e219f6-2f6f-4f13-89c8-6c592c1421ba&quot;,&quot;name&quot;:&quot;Join_Catalog&quot;,&quot;z&quot;:5,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;Join_Catalog&quot;}}},{&quot;type&quot;:&quot;devs.transformation.Explode&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[&quot;in&quot;],&quot;outPorts&quot;:[&quot;out&quot;],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;in&quot;,&quot;group&quot;:&quot;in&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;in&quot;}}},{&quot;id&quot;:&quot;out&quot;,&quot;group&quot;:&quot;out&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;out&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:390,&quot;y&quot;:390},&quot;angle&quot;:0,&quot;id&quot;:&quot;e43bb290-ccf3-4d81-b175-2f5cfaaee5ee&quot;,&quot;name&quot;:&quot;XML_TO_CSM&quot;,&quot;z&quot;:6,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;XML_TO_CSM&quot;}}},{&quot;type&quot;:&quot;devs.transformation.CSVTarget&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[&quot;in&quot;],&quot;outPorts&quot;:[],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;in&quot;,&quot;group&quot;:&quot;in&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;in&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:840,&quot;y&quot;:300},&quot;angle&quot;:0,&quot;id&quot;:&quot;0c329c4a-80d5-471a-a96c-b92b29d889c8&quot;,&quot;name&quot;:&quot;CSV_FUSION_RISK&quot;,&quot;z&quot;:7,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;CSV_FUSION_RISK&quot;}}},{&quot;type&quot;:&quot;devs.transformation.CSVTarget&quot;,&quot;size&quot;:{&quot;width&quot;:80,&quot;height&quot;:80},&quot;inPorts&quot;:[&quot;in&quot;],&quot;outPorts&quot;:[],&quot;ports&quot;:{&quot;groups&quot;:{&quot;in&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;white&quot;,&quot;magnet&quot;:&quot;passive&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;left&quot;,&quot;args&quot;:{&quot;y&quot;:10}}}},&quot;out&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;},&quot;label&quot;:{&quot;position&quot;:{&quot;name&quot;:&quot;right&quot;,&quot;args&quot;:{&quot;y&quot;:10}}},&quot;attrs&quot;:{&quot;.port-body&quot;:{&quot;fill&quot;:&quot;#4d4d4dde&quot;,&quot;stroke&quot;:&quot;#000&quot;,&quot;r&quot;:10,&quot;magnet&quot;:true},&quot;.port-label&quot;:{&quot;text&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;hidden&quot;,&quot;fill&quot;:&quot;#000&quot;},&quot;circle&quot;:{&quot;r&quot;:7,&quot;stroke&quot;:&quot;#4d4d4dde&quot;,&quot;stroke-width&quot;:1}}}},&quot;items&quot;:[{&quot;id&quot;:&quot;in&quot;,&quot;group&quot;:&quot;in&quot;,&quot;attrs&quot;:{&quot;.port-label&quot;:{&quot;text&quot;:&quot;in&quot;}}}]},&quot;position&quot;:{&quot;x&quot;:540,&quot;y&quot;:480},&quot;angle&quot;:0,&quot;id&quot;:&quot;03cc1c3f-21d4-4e27-bbd9-0546da0ff887&quot;,&quot;name&quot;:&quot;DS_XML_RESP&quot;,&quot;z&quot;:8,&quot;attrs&quot;:{&quot;.label&quot;:{&quot;text&quot;:&quot;DS_XML_RESP&quot;}}},{&quot;type&quot;:&quot;devs.transformation.Flow&quot;,&quot;source&quot;:{&quot;id&quot;:&quot;751bc954-f6b5-4ee6-8e68-292765ee9a90&quot;,&quot;port&quot;:&quot;out&quot;},&quot;target&quot;:{&quot;id&quot;:&quot;55dd17ca-eab4-4a31-89a1-5f640429a384&quot;,&quot;port&quot;:&quot;in&quot;},&quot;id&quot;:&quot;aff5c231-e4a4-47be-a38c-217ca3abb793&quot;,&quot;z&quot;:9,&quot;attrs&quot;:{}},{&quot;type&quot;:&quot;devs.transformation.Flow&quot;,&quot;source&quot;:{&quot;id&quot;:&quot;55dd17ca-eab4-4a31-89a1-5f640429a384&quot;,&quot;port&quot;:&quot;out&quot;},&quot;target&quot;:{&quot;id&quot;:&quot;51e3e86f-4b39-44b8-b2f4-ecc96d27c809&quot;,&quot;port&quot;:&quot;in&quot;},&quot;id&quot;:&quot;336e8f97-291a-465c-a162-c5eda4bb70f2&quot;,&quot;z&quot;:10,&quot;attrs&quot;:{}},{&quot;type&quot;:&quot;devs.transformation.Flow&quot;,&quot;source&quot;:{&quot;id&quot;:&quot;51e3e86f-4b39-44b8-b2f4-ecc96d27c809&quot;,&quot;port&quot;:&quot;out&quot;},&quot;target&quot;:{&quot;id&quot;:&quot;30e219f6-2f6f-4f13-89c8-6c592c1421ba&quot;,&quot;port&quot;:&quot;in&quot;},&quot;id&quot;:&quot;8a7f3516-35e1-49a3-a7c3-e721cb5a751c&quot;,&quot;z&quot;:11,&quot;attrs&quot;:{}},{&quot;type&quot;:&quot;devs.transformation.Flow&quot;,&quot;source&quot;:{&quot;id&quot;:&quot;30690c9c-ff9f-48bb-81d2-cefa99b62ed2&quot;,&quot;port&quot;:&quot;out&quot;},&quot;target&quot;:{&quot;id&quot;:&quot;30e219f6-2f6f-4f13-89c8-6c592c1421ba&quot;,&quot;port&quot;:&quot;join&quot;},&quot;id&quot;:&quot;11de3f5b-5f00-4dec-8ab8-581c794d9879&quot;,&quot;z&quot;:12,&quot;attrs&quot;:{}},{&quot;type&quot;:&quot;devs.transformation.Flow&quot;,&quot;source&quot;:{&quot;id&quot;:&quot;30e219f6-2f6f-4f13-89c8-6c592c1421ba&quot;,&quot;port&quot;:&quot;out&quot;},&quot;target&quot;:{&quot;id&quot;:&quot;0c329c4a-80d5-471a-a96c-b92b29d889c8&quot;,&quot;port&quot;:&quot;in&quot;},&quot;id&quot;:&quot;b15a474e-160b-4278-bf05-fc0c5a580b95&quot;,&quot;z&quot;:13,&quot;attrs&quot;:{}},{&quot;type&quot;:&quot;devs.transformation.Flow&quot;,&quot;source&quot;:{&quot;id&quot;:&quot;55dd17ca-eab4-4a31-89a1-5f640429a384&quot;,&quot;port&quot;:&quot;out&quot;},&quot;target&quot;:{&quot;id&quot;:&quot;e43bb290-ccf3-4d81-b175-2f5cfaaee5ee&quot;,&quot;port&quot;:&quot;in&quot;},&quot;id&quot;:&quot;cc705521-60e8-404c-b113-04a4869f0416&quot;,&quot;z&quot;:14,&quot;attrs&quot;:{}},{&quot;type&quot;:&quot;devs.transformation.Flow&quot;,&quot;source&quot;:{&quot;id&quot;:&quot;e43bb290-ccf3-4d81-b175-2f5cfaaee5ee&quot;,&quot;port&quot;:&quot;out&quot;},&quot;target&quot;:{&quot;id&quot;:&quot;03cc1c3f-21d4-4e27-bbd9-0546da0ff887&quot;,&quot;port&quot;:&quot;in&quot;},&quot;id&quot;:&quot;ae51eefa-460b-4246-9e74-329c2314f29e&quot;,&quot;z&quot;:15,&quot;attrs&quot;:{}}]}">
+  <targets xsi:type="etl:CSVTarget" name="CSV_FUSION_RISK" label="CSV_FUSION_RISK" quote="&quot;" escape="\">
+    <inputPort name="CSV_11in">
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </inputPort>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="ApplicationClass" targetColumnName="ApplicationClass"/>
+  </targets>
+  <targets xsi:type="etl:CSVTarget" name="DS_XML_RESP" label="DS_XML_RESP" quote="&quot;" escape="\">
+    <inputPort name="CSV_14in">
+      <fields name="ApplicationID" dataTypeDomain="STRING"/>
+      <fields name="AssociatedModelName" dataTypeDomain="STRING"/>
+      <fields name="ProductType" dataTypeDomain="STRING"/>
+      <fields name="ProposedProduct" dataTypeDomain="STRING"/>
+      <fields name="StrategyName" dataTypeDomain="STRING"/>
+      <fields name="StrategyVersion" dataTypeDomain="LONG"/>
+      <fields name="Customer_BirthDate" dataTypeDomain="STRING"/>
+      <fields name="Customer_FirstName" dataTypeDomain="STRING"/>
+      <fields name="Customer_Gender" dataTypeDomain="STRING"/>
+      <fields name="Customer_INN" dataTypeDomain="LONG"/>
+      <fields name="Customer_LastName" dataTypeDomain="STRING"/>
+      <fields name="Customer_PlaceOfBirth" dataTypeDomain="STRING"/>
+      <fields name="Customer_Snils" dataTypeDomain="STRING"/>
+      <fields name="Customer_citizenshipId" dataTypeDomain="STRING"/>
+      <fields name="Customer_clientId" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_AverageTotalAssets" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Currency" dataTypeDomain="STRING"/>
+      <fields name="FinancialInformation_L1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Profit" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_SalesRevenue" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_WorkingCapital" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsActivity" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsSinceReg" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_AmortizationType" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_Amount" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Currency" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_InterestRate" dataTypeDomain="DOUBLE"/>
+      <fields name="RequestedProduct_Periodicity" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Term" dataTypeDomain="LONG"/>
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </inputPort>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="ApplicationID" targetColumnName="ApplicationID"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="AssociatedModelName" targetColumnName="AssociatedModelName"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="ProductType" targetColumnName="ProductType"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="ProposedProduct" targetColumnName="ProposedProduct"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="StrategyName" targetColumnName="StrategyName"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="StrategyVersion" targetColumnName="StrategyVersion"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_BirthDate" targetColumnName="Customer_BirthDate"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_FirstName" targetColumnName="Customer_FirstName"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_Gender" targetColumnName="Customer_Gender"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_INN" targetColumnName="Customer_INN"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_LastName" targetColumnName="Customer_LastName"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_PlaceOfBirth" targetColumnName="Customer_PlaceOfBirth"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_Snils" targetColumnName="Customer_Snils"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_citizenshipId" targetColumnName="Customer_citizenshipId"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="Customer_clientId" targetColumnName="Customer_clientId"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_A1" targetColumnName="FinancialInformation_A1"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_A2" targetColumnName="FinancialInformation_A2"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_A3" targetColumnName="FinancialInformation_A3"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_A4" targetColumnName="FinancialInformation_A4"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_AverageTotalAssets" targetColumnName="FinancialInformation_AverageTotalAssets"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_Currency" targetColumnName="FinancialInformation_Currency"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_L1" targetColumnName="FinancialInformation_L1"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_L2" targetColumnName="FinancialInformation_L2"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_L3" targetColumnName="FinancialInformation_L3"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_L4" targetColumnName="FinancialInformation_L4"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_Profit" targetColumnName="FinancialInformation_Profit"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_SalesRevenue" targetColumnName="FinancialInformation_SalesRevenue"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="FinancialInformation_WorkingCapital" targetColumnName="FinancialInformation_WorkingCapital"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="GeneralInformation_NumMonthsActivity" targetColumnName="GeneralInformation_NumMonthsActivity"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="GeneralInformation_NumMonthsSinceReg" targetColumnName="GeneralInformation_NumMonthsSinceReg"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="RequestedProduct_AmortizationType" targetColumnName="RequestedProduct_AmortizationType"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="RequestedProduct_Amount" targetColumnName="RequestedProduct_Amount"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="RequestedProduct_Currency" targetColumnName="RequestedProduct_Currency"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="RequestedProduct_InterestRate" targetColumnName="RequestedProduct_InterestRate"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="RequestedProduct_Periodicity" targetColumnName="RequestedProduct_Periodicity"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="RequestedProduct_Term" targetColumnName="RequestedProduct_Term"/>
+    <inputFieldsMapping xsi:type="etl:TableTargetFeature" inputFieldName="ApplicationClass" targetColumnName="ApplicationClass"/>
+  </targets>
+  <transformationSteps xsi:type="etl:Drools" name="Drools_Apply_Strategy" label="Drools_Apply_Strategy" inputFactTypeName="Application" resultFactTypeName="EstimatedApplication" resultQueryName="getEstimation" resultFactName="EstimatedApplicationList">
+    <outputPort name="Drools_1out">
+      <fields name="ApplicationID" dataTypeDomain="STRING"/>
+      <fields name="AssociatedModelName" dataTypeDomain="STRING"/>
+      <fields name="ProductType" dataTypeDomain="STRING"/>
+      <fields name="ProposedProduct" dataTypeDomain="STRING"/>
+      <fields name="StrategyName" dataTypeDomain="STRING"/>
+      <fields name="StrategyVersion" dataTypeDomain="LONG"/>
+      <fields name="Customer_BirthDate" dataTypeDomain="STRING"/>
+      <fields name="Customer_FirstName" dataTypeDomain="STRING"/>
+      <fields name="Customer_Gender" dataTypeDomain="STRING"/>
+      <fields name="Customer_INN" dataTypeDomain="LONG"/>
+      <fields name="Customer_LastName" dataTypeDomain="STRING"/>
+      <fields name="Customer_PlaceOfBirth" dataTypeDomain="STRING"/>
+      <fields name="Customer_Snils" dataTypeDomain="STRING"/>
+      <fields name="Customer_citizenshipId" dataTypeDomain="STRING"/>
+      <fields name="Customer_clientId" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_AverageTotalAssets" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Currency" dataTypeDomain="STRING"/>
+      <fields name="FinancialInformation_L1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Profit" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_SalesRevenue" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_WorkingCapital" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsActivity" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsSinceReg" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_AmortizationType" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_Amount" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Currency" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_InterestRate" dataTypeDomain="DOUBLE"/>
+      <fields name="RequestedProduct_Periodicity" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Term" dataTypeDomain="LONG"/>
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </outputPort>
+    <inputPort name="Drools_1in">
+      <fields name="ApplicationID" dataTypeDomain="STRING"/>
+      <fields name="AssociatedModelName" dataTypeDomain="STRING"/>
+      <fields name="ProductType" dataTypeDomain="STRING"/>
+      <fields name="ProposedProduct" dataTypeDomain="STRING"/>
+      <fields name="StrategyName" dataTypeDomain="STRING"/>
+      <fields name="StrategyVersion" dataTypeDomain="LONG"/>
+      <fields name="Customer_BirthDate" dataTypeDomain="STRING"/>
+      <fields name="Customer_FirstName" dataTypeDomain="STRING"/>
+      <fields name="Customer_Gender" dataTypeDomain="STRING"/>
+      <fields name="Customer_INN" dataTypeDomain="LONG"/>
+      <fields name="Customer_LastName" dataTypeDomain="STRING"/>
+      <fields name="Customer_PlaceOfBirth" dataTypeDomain="STRING"/>
+      <fields name="Customer_Snils" dataTypeDomain="STRING"/>
+      <fields name="Customer_citizenshipId" dataTypeDomain="STRING"/>
+      <fields name="Customer_clientId" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_AverageTotalAssets" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Currency" dataTypeDomain="STRING"/>
+      <fields name="FinancialInformation_L1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Profit" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_SalesRevenue" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_WorkingCapital" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsActivity" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsSinceReg" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_AmortizationType" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_Amount" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Currency" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_InterestRate" dataTypeDomain="DOUBLE"/>
+      <fields name="RequestedProduct_Periodicity" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Term" dataTypeDomain="LONG"/>
+    </inputPort>
+  </transformationSteps>
+  <transformationSteps xsi:type="etl:Aggregation" name="DS_AGGR_RESP" label="DS_AGGR_RESP">
+    <outputPort name="Aggregation_5out">
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </outputPort>
+    <inputPort name="Aggregation_5in">
+      <fields name="ApplicationID" dataTypeDomain="STRING"/>
+      <fields name="AssociatedModelName" dataTypeDomain="STRING"/>
+      <fields name="ProductType" dataTypeDomain="STRING"/>
+      <fields name="ProposedProduct" dataTypeDomain="STRING"/>
+      <fields name="StrategyName" dataTypeDomain="STRING"/>
+      <fields name="StrategyVersion" dataTypeDomain="LONG"/>
+      <fields name="Customer_BirthDate" dataTypeDomain="STRING"/>
+      <fields name="Customer_FirstName" dataTypeDomain="STRING"/>
+      <fields name="Customer_Gender" dataTypeDomain="STRING"/>
+      <fields name="Customer_INN" dataTypeDomain="LONG"/>
+      <fields name="Customer_LastName" dataTypeDomain="STRING"/>
+      <fields name="Customer_PlaceOfBirth" dataTypeDomain="STRING"/>
+      <fields name="Customer_Snils" dataTypeDomain="STRING"/>
+      <fields name="Customer_citizenshipId" dataTypeDomain="STRING"/>
+      <fields name="Customer_clientId" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_AverageTotalAssets" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Currency" dataTypeDomain="STRING"/>
+      <fields name="FinancialInformation_L1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Profit" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_SalesRevenue" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_WorkingCapital" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsActivity" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsSinceReg" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_AmortizationType" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_Amount" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Currency" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_InterestRate" dataTypeDomain="DOUBLE"/>
+      <fields name="RequestedProduct_Periodicity" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Term" dataTypeDomain="LONG"/>
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </inputPort>
+    <groupByFieldName>ApplicationClass</groupByFieldName>
+  </transformationSteps>
+  <transformationSteps xsi:type="etl:Join" name="Join_Catalog" label="Join_Catalog">
+    <outputPort name="Join_7out">
+      <fields xsi:type="etl:ProjectionField" name="ApplicationClass" dataTypeDomain="INTEGER" sourceFields="//@transformationSteps.2/@inputPort/@fields.0"/>
+    </outputPort>
+    <inputPort name="Join_7in">
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </inputPort>
+    <joineePort name="Join_7join"/>
+  </transformationSteps>
+  <transformationSteps xsi:type="etl:ExplodeStep" name="XML_TO_CSM" label="XML_TO_CSM">
+    <outputPort name="Explode_fields_13out">
+      <fields name="ApplicationID" dataTypeDomain="STRING"/>
+      <fields name="AssociatedModelName" dataTypeDomain="STRING"/>
+      <fields name="ProductType" dataTypeDomain="STRING"/>
+      <fields name="ProposedProduct" dataTypeDomain="STRING"/>
+      <fields name="StrategyName" dataTypeDomain="STRING"/>
+      <fields name="StrategyVersion" dataTypeDomain="LONG"/>
+      <fields name="Customer_BirthDate" dataTypeDomain="STRING"/>
+      <fields name="Customer_FirstName" dataTypeDomain="STRING"/>
+      <fields name="Customer_Gender" dataTypeDomain="STRING"/>
+      <fields name="Customer_INN" dataTypeDomain="LONG"/>
+      <fields name="Customer_LastName" dataTypeDomain="STRING"/>
+      <fields name="Customer_PlaceOfBirth" dataTypeDomain="STRING"/>
+      <fields name="Customer_Snils" dataTypeDomain="STRING"/>
+      <fields name="Customer_citizenshipId" dataTypeDomain="STRING"/>
+      <fields name="Customer_clientId" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_AverageTotalAssets" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Currency" dataTypeDomain="STRING"/>
+      <fields name="FinancialInformation_L1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Profit" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_SalesRevenue" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_WorkingCapital" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsActivity" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsSinceReg" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_AmortizationType" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_Amount" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Currency" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_InterestRate" dataTypeDomain="DOUBLE"/>
+      <fields name="RequestedProduct_Periodicity" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Term" dataTypeDomain="LONG"/>
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </outputPort>
+    <inputPort name="Explode_fields_13in">
+      <fields name="ApplicationID" dataTypeDomain="STRING"/>
+      <fields name="AssociatedModelName" dataTypeDomain="STRING"/>
+      <fields name="ProductType" dataTypeDomain="STRING"/>
+      <fields name="ProposedProduct" dataTypeDomain="STRING"/>
+      <fields name="StrategyName" dataTypeDomain="STRING"/>
+      <fields name="StrategyVersion" dataTypeDomain="LONG"/>
+      <fields name="Customer_BirthDate" dataTypeDomain="STRING"/>
+      <fields name="Customer_FirstName" dataTypeDomain="STRING"/>
+      <fields name="Customer_Gender" dataTypeDomain="STRING"/>
+      <fields name="Customer_INN" dataTypeDomain="LONG"/>
+      <fields name="Customer_LastName" dataTypeDomain="STRING"/>
+      <fields name="Customer_PlaceOfBirth" dataTypeDomain="STRING"/>
+      <fields name="Customer_Snils" dataTypeDomain="STRING"/>
+      <fields name="Customer_citizenshipId" dataTypeDomain="STRING"/>
+      <fields name="Customer_clientId" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_A4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_AverageTotalAssets" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Currency" dataTypeDomain="STRING"/>
+      <fields name="FinancialInformation_L1" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L2" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L3" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_L4" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_Profit" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_SalesRevenue" dataTypeDomain="LONG"/>
+      <fields name="FinancialInformation_WorkingCapital" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsActivity" dataTypeDomain="LONG"/>
+      <fields name="GeneralInformation_NumMonthsSinceReg" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_AmortizationType" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_Amount" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Currency" dataTypeDomain="STRING"/>
+      <fields name="RequestedProduct_InterestRate" dataTypeDomain="DOUBLE"/>
+      <fields name="RequestedProduct_Periodicity" dataTypeDomain="LONG"/>
+      <fields name="RequestedProduct_Term" dataTypeDomain="LONG"/>
+      <fields name="ApplicationClass" dataTypeDomain="INTEGER"/>
+    </inputPort>
+  </transformationSteps>
+  <sources xsi:type="etl:XMLSource" name="DS_XML_REQ" label="DS_XML_REQ" path="/user/applications/*" rowTag="application">
+    <outputPort name="XML_0out">
+      <fields xsi:type="etl:XMLSourceField" name="ApplicationID" dataTypeDomain="STRING" xmlPath="ApplicationID"/>
+      <fields xsi:type="etl:XMLSourceField" name="AssociatedModelName" dataTypeDomain="STRING" xmlPath="AssociatedModelName"/>
+      <fields xsi:type="etl:XMLSourceField" name="ProductType" dataTypeDomain="STRING" xmlPath="ProductType"/>
+      <fields xsi:type="etl:XMLSourceField" name="ProposedProduct" dataTypeDomain="STRING" xmlPath="ProposedProduct"/>
+      <fields xsi:type="etl:XMLSourceField" name="StrategyName" dataTypeDomain="STRING" xmlPath="StrategyName"/>
+      <fields xsi:type="etl:XMLSourceField" name="StrategyVersion" dataTypeDomain="LONG" xmlPath="StrategyVersion"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_BirthDate" dataTypeDomain="STRING" xmlPath="Customer.BirthDate"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_FirstName" dataTypeDomain="STRING" xmlPath="Customer.FirstName"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_Gender" dataTypeDomain="STRING" xmlPath="Customer.Gender"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_INN" dataTypeDomain="LONG" xmlPath="Customer.INN"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_LastName" dataTypeDomain="STRING" xmlPath="Customer.LastName"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_PlaceOfBirth" dataTypeDomain="STRING" xmlPath="Customer.PlaceOfBirth"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_Snils" dataTypeDomain="STRING" xmlPath="Customer.Snils"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_citizenshipId" dataTypeDomain="STRING" xmlPath="Customer.citizenshipId"/>
+      <fields xsi:type="etl:XMLSourceField" name="Customer_clientId" dataTypeDomain="LONG" xmlPath="Customer.clientId"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_A1" dataTypeDomain="LONG" xmlPath="FinancialInformation.A1"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_A2" dataTypeDomain="LONG" xmlPath="FinancialInformation.A2"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_A3" dataTypeDomain="LONG" xmlPath="FinancialInformation.A3"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_A4" dataTypeDomain="LONG" xmlPath="FinancialInformation.A4"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_AverageTotalAssets" dataTypeDomain="LONG" xmlPath="FinancialInformation.AverageTotalAssets"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_Currency" dataTypeDomain="STRING" xmlPath="FinancialInformation.Currency"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_L1" dataTypeDomain="LONG" xmlPath="FinancialInformation.L1"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_L2" dataTypeDomain="LONG" xmlPath="FinancialInformation.L2"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_L3" dataTypeDomain="LONG" xmlPath="FinancialInformation.L3"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_L4" dataTypeDomain="LONG" xmlPath="FinancialInformation.L4"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_Profit" dataTypeDomain="LONG" xmlPath="FinancialInformation.Profit"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_SalesRevenue" dataTypeDomain="LONG" xmlPath="FinancialInformation.SalesRevenue"/>
+      <fields xsi:type="etl:XMLSourceField" name="FinancialInformation_WorkingCapital" dataTypeDomain="LONG" xmlPath="FinancialInformation.WorkingCapital"/>
+      <fields xsi:type="etl:XMLSourceField" name="GeneralInformation_NumMonthsActivity" dataTypeDomain="LONG" xmlPath="GeneralInformation.NumMonthsActivity"/>
+      <fields xsi:type="etl:XMLSourceField" name="GeneralInformation_NumMonthsSinceReg" dataTypeDomain="LONG" xmlPath="GeneralInformation.NumMonthsSinceReg"/>
+      <fields xsi:type="etl:XMLSourceField" name="RequestedProduct_AmortizationType" dataTypeDomain="STRING" xmlPath="RequestedProduct.AmortizationType"/>
+      <fields xsi:type="etl:XMLSourceField" name="RequestedProduct_Amount" dataTypeDomain="LONG" xmlPath="RequestedProduct.Amount"/>
+      <fields xsi:type="etl:XMLSourceField" name="RequestedProduct_Currency" dataTypeDomain="STRING" xmlPath="RequestedProduct.Currency"/>
+      <fields xsi:type="etl:XMLSourceField" name="RequestedProduct_InterestRate" dataTypeDomain="DOUBLE" xmlPath="RequestedProduct.InterestRate"/>
+      <fields xsi:type="etl:XMLSourceField" name="RequestedProduct_Periodicity" dataTypeDomain="LONG" xmlPath="RequestedProduct.Periodicity"/>
+      <fields xsi:type="etl:XMLSourceField" name="RequestedProduct_Term" dataTypeDomain="LONG" xmlPath="RequestedProduct.Term"/>
+    </outputPort>
+  </sources>
+  <sources xsi:type="etl:LocalSource" name="PRODUCT_CATALOG" label="PRODUCT_CATALOG">
+    <outputPort name="Local_8out"/>
+  </sources>
+  <transitions name="8954189a-c5d3-461a-8820-cbaac5195f3f" start="//@sources.0/@outputPort" finish="//@transformationSteps.0/@inputPort"/>
+  <transitions name="0a1d8bae-6c3f-44cc-a22f-25b1c70c78ec" start="//@transformationSteps.0/@outputPort" finish="//@transformationSteps.1/@inputPort"/>
+  <transitions name="d1bc27e0-80f3-48ed-a2bf-3eae52d74192" start="//@transformationSteps.1/@outputPort" finish="//@transformationSteps.2/@inputPort"/>
+  <transitions name="acb30ee8-237e-488e-a927-abc13adecfa6" start="//@sources.1/@outputPort" finish="//@transformationSteps.2/@joineePort"/>
+  <transitions name="1f1f8e7e-8681-4ded-b83f-4f04c2669375" start="//@transformationSteps.2/@outputPort" finish="//@targets.0/@inputPort"/>
+  <transitions name="c9b847c2-9a72-402d-9336-cee74910a9c8" start="//@transformationSteps.0/@outputPort" finish="//@transformationSteps.3/@inputPort"/>
+  <transitions name="9009acbf-a86a-4f9d-8226-5efd88d73682" start="//@transformationSteps.3/@outputPort" finish="//@targets.1/@inputPort"/>
+  <auditInfo changeUser="psimanihin" changeDateTime="2019-06-18T11:40:19.418+0300" createUser="psimanihin" createDateTime="2019-06-17T15:14:40.029+0300"/>
+</etl:Transformation>
