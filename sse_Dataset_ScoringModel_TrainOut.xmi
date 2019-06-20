@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="ASCII"?>
-<sse:Dataset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ScoringModel_TrainOut" shortName="TrainOut">
-  <auditInfo changeUser="psimanihin" changeDateTime="2019-06-18T18:20:59.860+0300" createUser="psimanihin" createDateTime="2019-06-17T16:56:57.187+0300"/>
+<sse:Dataset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ScoringModel_TrainOut" shortName="TrainOut" description="Train Data transformed with Development Notebook">
+  <auditInfo changeUser="asidorov" changeDateTime="2019-06-18T19:08:06.175+0300" createUser="psimanihin" createDateTime="2019-06-17T16:56:57.187+0300"/>
 </sse:Dataset>
