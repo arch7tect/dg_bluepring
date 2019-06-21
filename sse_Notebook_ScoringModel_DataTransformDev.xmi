@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:Notebook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ScoringModel_DataTransformDev" shortName="DataTransformDev" description="Data Transformation - Development Notebook">
-  <auditInfo changeUser="psimanihin" changeDateTime="2019-06-18T18:20:28.656+0300" createUser="psimanihin" createDateTime="2019-06-17T11:38:25.518+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-06-20T12:06:46.498+0300" createUser="psimanihin" createDateTime="2019-06-17T11:38:25.518+0300"/>
   <paragraphs name="ScoringModel_DataTransformation_2019-06-17T11:40:52.689" textVisible="true" resultVisible="false" titleVisible="false" status="SUCCESS">
     <body xsi:type="sse:CodeBody" interpreter="R" text="require(smbinning)&#xD;&#xA;require(data.table)&#xD;&#xA;require(ggplot2)"/>
     <result xsi:type="sse:TextResult" data="png &#xA;  2 "/>

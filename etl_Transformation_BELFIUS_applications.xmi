@@ -347,5 +347,5 @@
   <transitions name="1f1f8e7e-8681-4ded-b83f-4f04c2669375" start="//@transformationSteps.2/@outputPort" finish="//@targets.0/@inputPort"/>
   <transitions name="c9b847c2-9a72-402d-9336-cee74910a9c8" start="//@transformationSteps.0/@outputPort" finish="//@transformationSteps.3/@inputPort"/>
   <transitions name="9009acbf-a86a-4f9d-8226-5efd88d73682" start="//@transformationSteps.3/@outputPort" finish="//@targets.1/@inputPort"/>
-  <auditInfo changeUser="psimanihin" changeDateTime="2019-06-18T11:40:19.418+0300" createUser="psimanihin" createDateTime="2019-06-17T15:14:40.029+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-06-20T12:06:47.013+0300" createUser="psimanihin" createDateTime="2019-06-17T15:14:40.029+0300"/>
 </etl:Transformation>

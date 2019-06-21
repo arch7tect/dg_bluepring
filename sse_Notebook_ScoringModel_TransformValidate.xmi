@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:Notebook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ScoringModel_TransformValidate" shortName="TransformValidate" description="Validation - Data Transformation Model">
-  <auditInfo changeUser="psimanihin" changeDateTime="2019-06-18T18:22:41.329+0300" createUser="psimanihin" createDateTime="2019-06-17T16:59:01.637+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-06-20T12:06:44.860+0300" createUser="psimanihin" createDateTime="2019-06-17T16:59:01.637+0300"/>
   <paragraphs name="ScoringModel_TransformValidate_2019-06-17T19:04:27.021" textVisible="true" resultVisible="true" titleVisible="true">
     <body xsi:type="sse:CodeBody" interpreter="R"/>
   </paragraphs>

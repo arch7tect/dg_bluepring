@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:ModelNotebook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sse="http://www.neoflex.ru/meta/sse" name="ScoringModel1" shortName="ScoringModel1">
-  <auditInfo changeUser="psimanihin" changeDateTime="2019-06-18T18:21:53.500+0300" createUser="psimanihin" createDateTime="2019-06-17T18:31:09.916+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-06-20T12:06:46.922+0300" createUser="psimanihin" createDateTime="2019-06-17T18:31:09.916+0300"/>
   <paragraphs name="ScoringModel1_2019-06-18T12:58:05.565" title="Define Input Data" textVisible="true" resultVisible="true" titleVisible="true">
     <body xsi:type="sse:CodeBody" interpreter="R" text="# input - a data set for transformation&#xA;# output - the resulted data set&#xA;&#xA;# Define input --------&#xA;input"/>
   </paragraphs>

@@ -28,5 +28,5 @@
   </sources>
   <transitions name="aa898668-3213-45cc-9574-688d4e333c4a" start="//@sources.0/@outputPort" finish="//@transformationSteps.0/@inputPort"/>
   <transitions name="ef68fcb1-0105-4c6c-9a86-d33e6d485709" start="//@transformationSteps.0/@outputPort" finish="//@targets.0/@inputPort"/>
-  <auditInfo changeUser="orlov" changeDateTime="2019-05-31T17:10:39.937+0300" createUser="admin" createDateTime="2019-05-21T18:31:54.101+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-06-20T12:06:44.094+0300" createUser="admin" createDateTime="2019-05-21T18:31:54.101+0300"/>
 </etl:Transformation>

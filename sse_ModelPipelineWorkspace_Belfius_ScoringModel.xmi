@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sse:ModelPipelineWorkspace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sse="http://www.neoflex.ru/meta/sse" name="Belfius_ScoringModel" shortName="Belfius_ScoringModel" description="Scoring model example for Belfius demo" owner="Alexey Antonov" group="Data Science Team_NF">
-  <auditInfo changeUser="aantonov" changeDateTime="2019-06-19T00:51:50.881+0300" createUser="psimanihin" createDateTime="2019-06-17T11:28:24.462+0300"/>
+  <auditInfo changeUser="admin" changeDateTime="2019-06-20T12:06:47.371+0300" createUser="psimanihin" createDateTime="2019-06-17T11:28:24.462+0300"/>
 </sse:ModelPipelineWorkspace>
